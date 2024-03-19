@@ -23,10 +23,15 @@ function quitarDuplicados(miarray,operador){
  const oracion="Donquixote Rosinanteo, es que él era un Comandante de la Marina encubierto para detener a Doflamingo.";
 
  function fecuencia(oracion){
+   //   Utilizamos una expresión regular para buscar cualquier puntuación alrededor de la palabra
+    // La expresión regular busca cualquier puntuación al principio o al final de una palabra
+    // y la reemplaza por una cadena vacía
     const palabras=oracion.split('');
 
+
     palabras.forEach(palabra => {
-      palabra=palabra.replace()
+      palabra=palabra.replace(/\b[.,\/#!$%\^&\*;:{}=\-_`~()]+\b/g,'')
+      palabra,toLowerCase();
     });
 
  }
