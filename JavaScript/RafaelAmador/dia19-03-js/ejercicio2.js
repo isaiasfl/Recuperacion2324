@@ -1,3 +1,4 @@
+//Ejercicio 2
 const contarPalabras = (frase) =>{
     const repetidas = new Map();
     const fraseSinPuntuacion = frase.replace(/[,.+-?¿!¿]/g, " ");    

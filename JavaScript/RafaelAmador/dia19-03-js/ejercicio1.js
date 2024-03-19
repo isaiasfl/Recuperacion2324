@@ -1,4 +1,4 @@
-
+//Ejercicio 1
 const array= ["Hola", "Perro", "Animal", "Planeta", "Hola", "Animal"]
 
 const quitarDuplicados = (letra) =>{
