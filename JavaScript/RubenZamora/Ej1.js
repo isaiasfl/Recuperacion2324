@@ -4,22 +4,21 @@
     Si añadimos como segundo parametro 
     la letra R me devolvera el array con las palabras ordenadas de mayor longitud a menor, 
     si no escribo R o cualquier otra cosa me las devolvera de menor a mayor.
-
-    Escribe una funcion que cuente la frecuencia que una palabra aparece en una oracion, 
-    devolviendo un map donde las claves del map son las palabras encontradas
-    y los valores el numero de veces que aparece
-*/
+ */
 
 const arrayPalabras = ['manzana', 'pera', 'naranja', 'banana', 'uva', 'manzana'];
 
-function eliminarDuplicado(array, orden){
-    const set = new Set(array);
+function eliminarDuplicado(array, orden = 'asc'){
+    let set = new Set(array);
+    let arraySin = Array.from(set);
     if(orden=='R'){
-        
+        arraySin.sort((a, b) => b.length - a.length);
+    }else{
+        arraySin.sort((a, b) => a.length - b.length);
     }
-    console.log(set);
+    console.log(arraySin);
 }
 
-eliminarDuplicado(arrayPalabras);
+eliminarDuplicado(arrayPalabras, 'R');
 
 
