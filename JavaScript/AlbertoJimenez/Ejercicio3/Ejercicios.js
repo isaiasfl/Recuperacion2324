@@ -8,7 +8,7 @@ const frecuenciaPalabras = (frase)=>{
     let fraseDividida = frase.split(" ");
 
     for (let i of fraseDividida){
-        map.set(i, 1);
+        map.set(i, map.get(i) +1 || 1);
     }
     console.log(map);
 }
