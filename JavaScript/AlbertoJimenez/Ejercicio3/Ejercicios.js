@@ -3,9 +3,19 @@
 //  donde las claves del map son las palabras encontradas
 //  y los valores son el numero de veces que aparece dicha palabra 
 
-const frecuenciaPalabras = ()=>{
-    const map = {};
+const frecuenciaPalabras = (frase)=>{
+    const map = new Map();
+    let fraseDividida = frase.split(" ");
+
+    for (let i of fraseDividida){
+        map.set(i, 1);
+    }
+    console.log(map);
 }
 
+
+
+const frase = "Es un ejemplo del ejercicio 3 del del un";
+console.log(frecuenciaPalabras(frase));
 console.log("Ejercicio 3");
 
