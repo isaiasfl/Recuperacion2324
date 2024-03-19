@@ -10,10 +10,10 @@ function frecuenciaPalabras(frase) {
 
     palabras.forEach(palabra => {
         if (miMap.has(palabra)) {
-            miMap.palabra += 1;
+            miMap.set(palabra, miMap.get(palabra) + 1);
         }
         else{
-            miMap.palabra = 1
+            miMap.set(palabra, 1);
         }
     });
 
