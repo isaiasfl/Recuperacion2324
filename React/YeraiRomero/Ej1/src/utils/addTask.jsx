@@ -1,11 +1,17 @@
-import { addDoc } from "firebase/firestore";
-import { getCollection } from "./collection";
+import { fetchTasks } from './fetchTasks';
 export const addTask = async (task) => {
-  const tasksCollection = getCollection("tasks");
   try {
-    const docRef = await addDoc(tasksCollection, task);
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
+    const allTasks = await fetchTasks();
+    allTasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(allTasks));
+  } catch (error) {
+    console.error(error);
   }
 };
+/*
+// fetchs from localstorage
+export const fetchTasks = async () => {
+  const data = JSON.parse(localStorage.getItem('tasks'));
+  return data || [];
+}
+*/

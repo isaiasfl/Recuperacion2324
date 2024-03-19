@@ -22,8 +22,8 @@ function App() {
   }, []);
 
   const updateTask = async (newTask) => {
-    const { desc, done } = newTask;
-    setTodos(prevTodos => [...prevTodos, { desc, done }]);
+    const { desc, done, priority } = newTask;
+    setTodos(prevTodos => [...prevTodos, { desc, done, priority }]);
     await addTask(newTask);
   };
 

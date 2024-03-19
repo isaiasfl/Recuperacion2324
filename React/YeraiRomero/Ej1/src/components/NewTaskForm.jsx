@@ -5,7 +5,7 @@ import priorityMap from '../utils/priorityMap';
 const NewTaskForm = ({ updateTask }) => {
   const [taskDesc, setTaskDesc] = useState('');
   const [priority, setPriority] = useState(1);
-  const [priorityStarts, setPriorityStarts] = useState('⭐');
+  const [priorityStars, setPriorityStars] = useState('⭐');
 
   const pmap = (p) => priorityMap(p);
 
@@ -14,7 +14,7 @@ const NewTaskForm = ({ updateTask }) => {
   };
   const handlePriorityChange = (e) => {
     setPriority(e.target.value);
-    setPriorityStarts(pmap(e.target.value));
+    setPriorityStars(pmap(e.target.value));
   }
 
   const handleSubmit = (e) => {
@@ -37,7 +37,7 @@ const NewTaskForm = ({ updateTask }) => {
         value={taskDesc}
         onChange={handleInputChange}
       />
-      <p>Prioridad: {priorityStarts} ({priority})</p>
+      <p>Prioridad: {priorityStars} ({priority})</p>
       <input
         type="range"
         id="priority"
