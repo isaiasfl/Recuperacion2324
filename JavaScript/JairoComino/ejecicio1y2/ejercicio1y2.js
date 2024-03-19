@@ -20,18 +20,33 @@ function quitarDuplicados(miarray,operador){
   */
 
 
- const oracion="Donquixote Rosinanteo, es que él era un Comandante de la Marina encubierto para detener a Doflamingo.";
+ const oracion="Donquixote Rosinanteo, es que que que él era un Comandante de la Marina encubierto para detener a Doflamingo.";
 
  function fecuencia(oracion){
-   //   Utilizamos una expresión regular para buscar cualquier puntuación alrededor de la palabra
+ 
+    const palabras=oracion.split(' ');
+
+    const numeroPlablabras=new Map()
+    palabras.forEach(palabra => {
+    //   Utilizamos una  expresión regular para buscar cualquier puntuación alrededor de la palabra
     // La expresión regular busca cualquier puntuación al principio o al final de una palabra
     // y la reemplaza por una cadena vacía
-    const palabras=oracion.split('');
-
-
-    palabras.forEach(palabra => {
+    // esdecir coge cualquier  caracter especial  como ejemplo :. , # @ |!· $ % & / ? ¿  y lo cambia por ' '
       palabra=palabra.replace(/\b[.,\/#!$%\^&\*;:{}=\-_`~()]+\b/g,'')
-      palabra,toLowerCase();
+      palabra.toLowerCase();
+      // Incrementar el numero de veces que aparece  la palabra en el mapa
+      if (numeroPlablabras.has(palabra)) {
+        numeroPlablabras.set(palabra, numeroPlablabras.get(palabra) + 1);
+      }   else {
+      numeroPlablabras.set(palabra, 1);
+      }
+
     });
+    return numeroPlablabras;
 
  }
+ const npalabras = fecuencia(oracion);
+ console.log("Oracion:");
+ console.log(oracion);
+console.log("Frecuencia de palabras:");
+console.log(npalabras);
