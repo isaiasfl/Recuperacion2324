@@ -22,12 +22,10 @@ const NewTaskForm = ({ updateTask }) => {
     if (!taskDesc.trim()) return;
     let data = {
       desc: taskDesc,
+      priority: priority,
       done: false,
     };
-    // Call updateTask function passed from parent component
     updateTask(data);
-
-    // Clear input field after submitting
     setTaskDesc('');
   };
 
