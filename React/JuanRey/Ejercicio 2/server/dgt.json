@@ -1,0 +1,24 @@
+{
+    "altas":[
+        {
+            "id":1,
+            "nbastidor":"47595",
+            "marca": "Ford",
+            "modelo": "Mustang",
+            "tipo": "Coche",
+            "color": "Negro",
+            "fechaAlta": "2020-01-01",
+            "matricula": "1423ACB"
+        },
+        {
+            "id":2,
+            "nbastidor":"61423",
+            "marca": "Ford",
+            "modelo": "Mustang",
+            "tipo": "Coche",
+            "color": "Blanco",
+            "fechaAlta": "2023-01-01",
+            "matricula": "1223ABC"
+        }
+    ]
+}
