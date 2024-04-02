@@ -1,6 +1,14 @@
+import AddVehicleForm from "../components/AddVehicleForm"
+import NavBar from "../components/NavBar"
+
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+  <>
+    <NavBar />
+    <div className="felx flex-col">
+      <AddVehicleForm />
+    </div>
+  </>
   )
 }
 

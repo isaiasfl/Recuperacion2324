@@ -1,0 +1,14 @@
+{
+  "altas": [
+    {
+      "id": 1,
+      "numBastidor": "4595",
+      "brand": "Renault",
+      "model": "Scenic",
+      "type": "Coche",
+      "color": "azul",
+      "registrationDate": "02/04/2024",
+      "matricula": "1234ABC"
+    }
+  ]
+}
