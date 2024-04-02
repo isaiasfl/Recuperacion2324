@@ -1,20 +1,19 @@
-
 //--------------------------| GUARDAR TAREAS EN LOCALSTORAGE |--------------------------------//
 
 const saveTaskToLocalStorage = (key, newTask) => {
-    const existingData = window.localStorage.getItem(key);
-    let newData = [];
+  const existingData = window.localStorage.getItem(key);
+  let newData = [];
 
-    if (existingData) {
-        // Si la clave ya existe en el localStorage, obtengo los datos existentes.
-        newData = JSON.parse(existingData);
-    }
+  if (existingData) {
+    // Si la clave ya existe en el localStorage, obtengo los datos existentes.
+    newData = JSON.parse(existingData);
+  }
 
-    // Añado la nueva tarea al array de tareas.
-    newData.push(newTask);
+  // Añado la nueva tarea al array de tareas.
+  newData.push(newTask);
 
-    // Almaceno los datos actualizados en el localStorage.
-    window.localStorage.setItem(key, JSON.stringify(newData));
+  // Almaceno los datos actualizados en el localStorage.
+  window.localStorage.setItem(key, JSON.stringify(newData));
 };
 
 export default saveTaskToLocalStorage;
@@ -22,46 +21,46 @@ export default saveTaskToLocalStorage;
 //--------------------------| OBTENER TAREAS DE LOCALSTORAGE |--------------------------------//
 
 export const getAllTasksFromLocalStorage = (key) => {
-    const existingData = window.localStorage.getItem(key);
-
-    if (existingData) {
-        // Si la clave existe en el localStorage, obtenemos las tareas.
-        return JSON.parse(existingData);
-    }
-}
-
-
+  const existingData = window.localStorage.getItem(key);
+  console.log("existingData -->", existingData);
+  if (existingData) {
+    // Si la clave existe en el localStorage, obtenemos las tareas.
+    return JSON.parse(existingData);
+  } else {
+    console.log("Debo crear la clave aquí");
+  }
+};
 
 //--------------------------| NUMERO DE TAREAS DE LOCALSTORAGE |--------------------------------//
 
 export const countTasksInLocalStorage = (key) => {
-    const existingData = window.localStorage.getItem(key);
+  const existingData = window.localStorage.getItem(key);
 
-    if (existingData) {
-        // Si la clave existe en el localStorage, obtenemos el numero de tareas.
-        const dataArray = JSON.parse(existingData);
+  if (existingData) {
+    // Si la clave existe en el localStorage, obtenemos el numero de tareas.
+    const dataArray = JSON.parse(existingData);
 
-        return dataArray.length;
-        
-    } else {
-        // Si la clave no existe, devuelve 0.
-        return 0;
-    }
+    return dataArray.length;
+  } else {
+    // Si la clave no existe, devuelve 0.
+    return 0;
+  }
 };
 
 //--------------------------| NUMERO DE TAREAS PRIORITARIAS |--------------------------------//
 
 export const countTaskWithHigherPriority = (key) => {
-    const existingData = window.localStorage.getItem(key);
+  const existingData = window.localStorage.getItem(key);
 
-    if (existingData) {
-        const dataArray = JSON.parse(existingData);
+  if (existingData) {
+    const dataArray = JSON.parse(existingData);
 
-        const taskWithHigherPriority = dataArray.filter((task)=>task.priority === '5');
+    const taskWithHigherPriority = dataArray.filter(
+      (task) => task.priority === "5"
+    );
 
-        return taskWithHigherPriority.length;
-    }
-    else {
-        return 0;
-    }
-}
+    return taskWithHigherPriority.length;
+  } else {
+    return 0;
+  }
+};
