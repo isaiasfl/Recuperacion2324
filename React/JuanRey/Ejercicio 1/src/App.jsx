@@ -1,5 +1,6 @@
-import { createBrowserRouter,RouterProvider } from 'react-router-dom'
-import './App.css';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import { AuthProvider } from './context/AuthProvider';
+import ProtectedRoute from './util/ProtectedRoute';
 import LoginPage from "./pages/LoginPage";
 import ErrorPage from "./pages/ErrorPage";
 import RootPage from "./pages/RootPage";
@@ -27,8 +28,11 @@ function App() {
       ]
     }
   ])
-
-  return;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />;
+    </AuthProvider>
+  );
 }
 
 export default App
