@@ -7,7 +7,7 @@ function generateRandomLetter() {
     return alphabet.charAt(Math.floor(Math.random() * alphabet.length));
 }
 
-function generateRandomPlate() {
+export function generateRandomPlate() {
     let plate = '';
     for (let i = 0; i < 4; i++) {
         plate += generateRandomNumber(0, 9);
