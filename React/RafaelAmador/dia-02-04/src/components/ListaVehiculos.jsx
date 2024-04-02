@@ -11,29 +11,31 @@ function ListaVehiculos() {
     });
   }, [vehiculos]);
 
+  const getCardStyle = (tipo) => {
+    switch (tipo) {
+      case 'Coche':
+        return { backgroundColor: 'blue' };
+      case 'Moto':
+        return { backgroundColor: 'grey' };
+      case 'Camion':
+        return { backgroundColor: 'brown' };
+      default:
+        return {};
+    }
+  };
+
   return (
-    <div>
-      <h2>Lista de Vehículos</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Número de Bastidor</th>
-            <th>Marca</th>
-            <th>Color</th>
-            <th>Tipo de Vehículo</th>
-          </tr>
-        </thead>
-        <tbody>
-          {vehiculos.map((vehiculo, index) => (
-            <tr key={index}>
-              <td>{vehiculo.bastidor}</td>
-              <td>{vehiculo.marca}</td>
-              <td>{vehiculo.color}</td>
-              <td>{vehiculo.tipo}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="vehiculos-container">
+      {vehiculos.map((vehiculo, index) => (
+        <div className="vehiculo-card" key={index} style={getCardStyle(vehiculo.tipo)}>
+          <p>Número de Bastidor: {vehiculo.bastidor}</p>
+          <p>Tipo de Vehículo: {vehiculo.tipo}</p>
+          <p>Marca: {vehiculo.marca}</p>
+          <p>Modelo: {vehiculo.modelo}</p>
+          <p>Color: {vehiculo.color}</p>
+          <p>Matricula: {vehiculo.matricula}</p>
+        </div>
+      ))}
     </div>
   );
 }
