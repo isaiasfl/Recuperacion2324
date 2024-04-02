@@ -1,0 +1,14 @@
+{
+    "altas": [
+        {
+            "id": 1,
+            "bastidor": "12345",
+            "marca" : "Renault",
+            "modelo": "scenic",
+            "tipo": "Coche",
+            "color": "azul",
+            "fecha": "02/04/2024",
+            "matricula":"1234ABC"
+        }
+    ]
+}
