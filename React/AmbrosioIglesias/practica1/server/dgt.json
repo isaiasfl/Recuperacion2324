@@ -1,0 +1,14 @@
+{
+    "altas": [
+        {
+            "id": 1,
+            "nbastidor": "47595",
+            "marca": "renault",
+            "modelo": "scenic",
+            "tipo": "Coche",
+            "color":"Azul",
+            "fecha": "02/04/2024",
+            "matricula": "1234ABC"
+        }
+    ]
+}
