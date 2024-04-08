@@ -1,44 +1,54 @@
 {
   "altas": [
     {
-      "id": "1",
-      "bastidor": "12345",
-      "marca": "Renault",
-      "modelo": "scenic",
-      "tipo": "Coche",
-      "color": "azul",
-      "fecha": "02/04/2024",
-      "matricula": "1234ABC"
+      "id": "a165",
+      "bastidor": "80753",
+      "marca": "Honda",
+      "modelo": "pcx125",
+      "tipo": "Moto",
+      "color": "rojo",
+      "fecha": "05/04/2024",
+      "matricula": "5757DRT"
     },
     {
-      "id": "91d8",
-      "bastidor": "98765",
+      "id": "8aae",
+      "bastidor": "38678",
       "marca": "Seat",
       "modelo": "Ibiza",
       "tipo": "Coche",
-      "color": "blanco",
-      "fecha": "02/04/2024",
-      "matricula": "7264VQL"
-    },
-    {
-      "id": "c318",
-      "bastidor": "43534",
-      "marca": "Honda",
-      "modelo": "g5",
-      "tipo": "moto",
-      "color": "Naranja",
-      "fecha": "02/04/2024",
-      "matricula": "5336DFB"
-    },
-    {
-      "id": "bb96",
-      "bastidor": "21342",
-      "marca": "Mercedes",
-      "modelo": "12",
-      "tipo": "camion",
       "color": "negro",
-      "fecha": "02/04/2024",
-      "matricula": "3460HLD"
+      "fecha": "05/04/2024",
+      "matricula": "7215QRW"
+    },
+    {
+      "id": "b02d",
+      "bastidor": "29187",
+      "marca": "Volvo",
+      "modelo": "Trucks",
+      "tipo": "Camion",
+      "color": "blanco",
+      "fecha": "05/04/2024",
+      "matricula": "0689GSY"
+    },
+    {
+      "id": "3eb0",
+      "bastidor": "67826",
+      "marca": "Volskwagen",
+      "modelo": "Sharan",
+      "tipo": "Coche",
+      "color": "gris",
+      "fecha": "05/04/2024",
+      "matricula": "7879QOB"
+    },
+    {
+      "id": "dd71",
+      "bastidor": "20411",
+      "marca": "Seat",
+      "modelo": "panda",
+      "tipo": "Coche",
+      "color": "violeta",
+      "fecha": "05/04/2024",
+      "matricula": "1296HKZ"
     }
   ]
 }

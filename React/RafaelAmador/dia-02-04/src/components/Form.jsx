@@ -3,9 +3,9 @@ import Swal from 'sweetalert2';
 import { generarFechaActual } from "../helper/generateFecha";
 import { generarMatricula } from "../helper/generateMatricula";
 import { postVehiculo } from "../helper/postVehiculo";
+import { generarBastidor } from "../helper/generateBastidor";
 
 const Form = () => {
-    const [bastidor, setBastidor] = useState("")
     const [marca, setMarca] = useState("")
     const [modelo, setModelo] = useState("")
     const [color, setColor] = useState("")
@@ -15,7 +15,7 @@ const Form = () => {
         event.preventDefault();
     
   
-        if (!bastidor || !marca || !modelo || !color) {
+        if ( !marca || !modelo || !color) {
            
           Swal.fire({
             icon: 'error',
@@ -27,7 +27,8 @@ const Form = () => {
         }else {
           const fecha = generarFechaActual();
           try {
-              const matricula = await generarMatricula(); // Espera a que se genere la matrícula
+              const matricula = await generarMatricula();
+              const bastidor = await generarBastidor();
               await postVehiculo(bastidor, vehiculo, marca, modelo, color, matricula, fecha);
               Swal.fire({
                   icon: 'success',
@@ -43,7 +44,6 @@ const Form = () => {
               });
           }
       }
-        setBastidor("")
         setMarca("")
         setModelo("")
         setColor("")
@@ -53,51 +53,51 @@ const Form = () => {
 
   return (
     <>
-        <form onSubmit={handleSubmit}  >
-            <label> Numero de bastidor:</label><br />
-            <input
-        type="text"
-        name="bastidor"
-        value={bastidor}
-        onChange={(e) => setBastidor(e.target.value)}
-      /><br />
-      <label>Marca del vehiculo</label><br />
-      <input
-        type="text"
-        name="marca"
-        value={marca}
-        onChange={(e) => setMarca(e.target.value)}
-      /><br />
-       <label>Modelo del vehiculo</label><br />
-      <input
-        type="text"
-        name="modelo"
-        value={modelo}
-        onChange={(e) => setModelo(e.target.value)}
-      /><br />
-      <label>Color</label><br />
-      <input
-        type="text"
-        name="color"
-        value={color}
-        onChange={(e) => setColor(e.target.value)}
-      /><br />
-      <label>Tipo de vehiculo</label><br />
-      <select
-        name="vehiculo"
-        id="vehiculo"
-        value={vehiculo}
-        onChange={(e) => setVehiculo(e.target.value)}
-      >
-              <option value="coche">Coche</option>
-              <option value="moto">Moto</option>
-              <option value="camion">Camion</option>
-            </select>
-            <input type="submit" value="Validar"
-            
-            style={{ backgroundColor: '#007bff', color: 'white', padding: '12px 20px', border: 'none', borderRadius: '4px', cursor: 'pointer', width: '100%' }} />
-        </form>
+      <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: '0 auto', textAlign: 'center' }}>
+        <label style={{ display: 'block', marginBottom: '5px' }}>Marca del vehículo</label>
+        <input
+          type="text"
+          name="marca"
+          value={marca}
+          onChange={(e) => setMarca(e.target.value)}
+          style={{ width: '100%', padding: '10px', marginBottom: '15px', borderRadius: '5px', border: '1px solid #ccc' }}
+        />
+        <label style={{ display: 'block', marginBottom: '5px' }}>Modelo del vehículo</label>
+        <input
+          type="text"
+          name="modelo"
+          value={modelo}
+          onChange={(e) => setModelo(e.target.value)}
+          style={{ width: '100%', padding: '10px', marginBottom: '15px', borderRadius: '5px', border: '1px solid #ccc' }}
+        />
+        <label style={{ display: 'block', marginBottom: '5px' }}>Color</label>
+        <input
+          type="text"
+          name="color"
+          value={color}
+          onChange={(e) => setColor(e.target.value)}
+          style={{ width: '100%', padding: '10px', marginBottom: '15px', borderRadius: '5px', border: '1px solid #ccc' }}
+        />
+        <label style={{ display: 'block', marginBottom: '5px' }}>Tipo de vehículo</label>
+        <select
+          name="vehiculo"
+          id="vehiculo"
+          value={vehiculo}
+          onChange={(e) => setVehiculo(e.target.value)}
+          style={{ width: '100%', padding: '10px', marginBottom: '15px', borderRadius: '5px', border: '1px solid #ccc' }}
+        >
+          <option value="Coche">Coche</option>
+          <option value="Moto">Moto</option>
+          <option value="Camión">Camión</option>
+        </select>
+        <input
+          type="submit"
+          value="Validar"
+          style={{ backgroundColor: '#007bff', color: 'white', padding: '12px 20px', border: 'none', borderRadius: '4px', cursor: 'pointer', width: '100%' }}
+        />
+      </form>
     </>
+    
   )
 }
 

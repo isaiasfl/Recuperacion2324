@@ -18,7 +18,7 @@ function ListaVehiculos() {
       case 'Moto':
         return { backgroundColor: 'grey' };
       case 'Camion':
-        return { backgroundColor: 'brown' };
+        return { backgroundColor: '#654321' };
       default:
         return {};
     }
