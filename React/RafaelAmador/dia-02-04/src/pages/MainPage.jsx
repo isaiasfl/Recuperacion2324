@@ -8,40 +8,13 @@ const MainPage = () => {
   const [vehiculos, setVehiculos] = useState([]);
   const [tipo, setTipo] = useState("Todos")
 
-  if(tipo=="Todos"){
+ 
     useEffect(() => {
-   
       getVehiculos((data) => {
         setVehiculos(data);
-      });
-    }, [vehiculos]);
-  }
-  if(tipo=="Coche"){
-    useEffect(() => {
-   
-      getCoches((data) => {
-        setVehiculos(data);
-      });
-    }, [vehiculos]);
-  }
-  if(tipo=="Moto"){
-    useEffect(() => {
-   
-      getMotos((data) => {
-        setVehiculos(data);
-      });
-    }, [vehiculos]);
-  }
-  if(tipo=="Camion"){
-    useEffect(() => {
-   
-      getCamion((data) => {
-        setVehiculos(data);
-      });
-    }, [vehiculos]);
-  }
-  
-
+      }, tipo)
+      
+    }, [vehiculos, tipo]);
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
       <Header />
