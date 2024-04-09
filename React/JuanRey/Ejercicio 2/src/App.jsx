@@ -1,5 +1,5 @@
 import Formulario from './components/Formulario';
-import Lista from "./components/Lista";
+import Lista from "./components/Card";
 
 function App() {
   return (
