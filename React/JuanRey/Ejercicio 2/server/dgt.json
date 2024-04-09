@@ -1,24 +1,44 @@
 {
-    "altas":[
-        {
-            "id":1,
-            "nbastidor":"47595",
-            "marca": "Ford",
-            "modelo": "Mustang",
-            "tipo": "Coche",
-            "color": "Negro",
-            "fechaAlta": "2020-01-01",
-            "matricula": "1423ACB"
-        },
-        {
-            "id":2,
-            "nbastidor":"61423",
-            "marca": "Ford",
-            "modelo": "Mustang",
-            "tipo": "Coche",
-            "color": "Blanco",
-            "fechaAlta": "2023-01-01",
-            "matricula": "1223ABC"
-        }
-    ]
+  "altas": [
+    {
+      "id": 1,
+      "nbastidor": "47595",
+      "marca": "Ford",
+      "modelo": "Mustang",
+      "tipo": "Coche",
+      "color": "Negro",
+      "fechaAlta": "2020-01-01",
+      "matricula": "1423ACB"
+    },
+    {
+      "id": 2,
+      "nbastidor": "61423",
+      "marca": "Ford",
+      "modelo": "Mustang",
+      "tipo": "Coche",
+      "color": "Blanco",
+      "fechaAlta": "2023-01-01",
+      "matricula": "1223ABC"
+    },
+    {
+      "id": "369a",
+      "nbastidor": "23123",
+      "marca": "Peugeot",
+      "modelo": "Alfa",
+      "tipo": "Moto",
+      "color": "Blanca",
+      "matricula": "5498JSC",
+      "fechaAlta": "2024-04-09T11:26:08.873Z"
+    },
+    {
+      "id": "cd6f",
+      "nbastidor": "81232",
+      "marca": "Citroen",
+      "modelo": "Algo",
+      "tipo": "Camión",
+      "color": "Azul",
+      "matricula": "0087QIN",
+      "fechaAlta": "2024-04-09T12:19:25.848Z"
+    }
+  ]
 }
