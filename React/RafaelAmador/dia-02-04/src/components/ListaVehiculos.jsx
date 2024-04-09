@@ -14,7 +14,7 @@ function ListaVehiculos() {
   const getCardStyle = (tipo) => {
     switch (tipo) {
       case 'Coche':
-        return { backgroundColor: 'blue' };
+        return { backgroundColor: '#014bff' };
       case 'Moto':
         return { backgroundColor: 'grey' };
       case 'Camion':

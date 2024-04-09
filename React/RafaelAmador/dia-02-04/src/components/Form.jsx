@@ -88,7 +88,7 @@ const Form = () => {
         >
           <option value="Coche">Coche</option>
           <option value="Moto">Moto</option>
-          <option value="Camión">Camión</option>
+          <option value="Camion">Camión</option>
         </select>
         <input
           type="submit"
