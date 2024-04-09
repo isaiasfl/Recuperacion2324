@@ -45,8 +45,11 @@ function quitarDuplicados(miarray,operador){
     return numeroPlablabras;
 
  }
+ 
  const npalabras = fecuencia(oracion);
  console.log("Oracion:");
  console.log(oracion);
 console.log("Frecuencia de palabras:");
 console.log(npalabras);
+
+

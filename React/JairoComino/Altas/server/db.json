@@ -1,14 +1,54 @@
 {
-    "altas":[
-        {
-            "id":1,
-            "nbastidor":"47595",
-            "marca":"Renault",
-            "modelo":"Scenic",
-            "tipo":"coche",
-            "color":"azul",
-            "fecha":"02/04/2024",
-            "Matricula":"1234ABC"
-        }
-    ]
+  "altas": [
+    {
+      "id": "1",
+      "nbastidor": "47595",
+      "marca": "Renault",
+      "modelo": "Scenic",
+      "tipo": "coche",
+      "color": "azul",
+      "fecha": "02/04/2024",
+      "matricula": "1234ABC"
+    },
+    {
+      "id": "e0c6",
+      "nbastidor": "2134",
+      "marca": "Seat",
+      "modelo": "Cupra",
+      "tipo": "coche",
+      "color": "negro",
+      "fecha": "2024-04-03",
+      "matricula": "8779KRZ"
+    },
+    {
+      "id": "71d8",
+      "nbastidor": "B1ZckTFDpWTXM7Wl",
+      "marca": "Seat",
+      "modelo": "cordoba",
+      "tipo": "coche",
+      "color": "gris",
+      "fecha": "2024-04-03",
+      "matricula": "5532SKL"
+    },
+    {
+      "id": "b752",
+      "nbastidor": "xi4mKwqPi1brmrNU",
+      "marca": "Kawasaki",
+      "modelo": "z900",
+      "tipo": "motocicleta",
+      "color": "verde",
+      "fecha": "2024-04-03",
+      "matricula": "6179UJL"
+    },
+    {
+      "id": "4d39",
+      "nbastidor": "crfqOTWfltpNdNJv",
+      "marca": "Man",
+      "modelo": " TGX 18.480 4×2 BLS EfficientLine 2",
+      "tipo": "camion",
+      "color": "blanco",
+      "fecha": "2024-04-03",
+      "matricula": "4813SAE"
+    }
+  ]
 }

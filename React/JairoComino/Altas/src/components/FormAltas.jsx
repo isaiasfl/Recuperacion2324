@@ -1,45 +1,140 @@
 import { useState } from "react"
 import Swal from "sweetalert2";
 import getdata from "../helpers/getdata";
+import generarMatricula from "../helpers/generarmatriculas";
+import obtenerFechaActual from "../helpers/generadorfechas";
+import nbastidoraletorio from "../helpers/nbastidoraleatorio";
 // nºvastidor,marca,modelo ,tipo(motocicleta,coche,camion),color,fecha de alta
 
 const FormAltas = () => {
     const [nbastidor, setNBastidor] = useState("");
     const [marca, setMarca] = useState("");
+    const [modelo, setModelo] = useState("");
     const [tipo, setTipo] = useState("");
     const [color, setColor] = useState("");
-
-
+    let matriculaAleatoria="";
+    let fechaactual= "";
 
 
     ///logica
-    const handleSubmit=()=>{
-            const data=getdata("http://localhost:4000/altas");
-        const newALta={
-            id:data.lenght
-        }
-
-        Swal.fire({
-            icon: "success",
-            title: "¡Inserción correcta!",
-            text: "Datos del veiculo insertados correctamente",
-          });
+    // Función para comprobar si el número de bastidor está repetido en el array
+    function tieneRepetidosbastidores(array, numeroBastidor) {
+    const numBastidores = array && array.map(item => item.nbastidor);
+    console.log(numBastidores);
+    console.log(numBastidores.includes(numeroBastidor));
+    return numBastidores.includes(numeroBastidor);
     }
+    // Función para comprobar si la matricla  está  en el array
+    function tieneRepetidosmatriculas(array, matriculaAleatoria) {
+        const matriculas = array && array.map(item => item.matricula);
+        console.log(matriculas.includes(matriculaAleatoria));
+        return matriculas.includes(matriculaAleatoria);
+    }
+
+
+   
+  
+    
+const handleSubmit=async(e)=>{
+  e.preventDefault();
+    try {
+        
+    
+            const data=await getdata("http://localhost:4000/altas");
+
+  if (tieneRepetidosbastidores(data, nbastidor)==true) {
+    
+    console.log("El número de bastidor está repetido.");
+  } else {
+    console.log(tieneRepetidosbastidores);
+         matriculaAleatoria=generarMatricula();
+     if (tieneRepetidosmatriculas(data, matriculaAleatoria)==true){
+         matriculaAleatoria=generarMatricula()
+     }
+     if (nbastidor==""&&marca==""&&modelo==""&&tipo==""&&color=="") {
+     
+       console.log("campos vacios");
+     }
+      fechaactual=obtenerFechaActual()
+     const newALta={
+      nbastidor:nbastidor,
+      marca:marca,
+      modelo:modelo,
+      tipo:tipo,
+      color:color,
+      fecha:fechaactual,
+      matricula:matriculaAleatoria
+  };
+  console.log(newALta);
+
+     
+
+    // Realizar la solicitud POST al endpoint "altas"
+    fetch('http://localhost:4000/altas', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newALta)
+    })
+    .then(response => {
+      if (response.ok) {
+        // Limpiar el estado del formulario si la solicitud es exitosa
+        setNBastidor("");
+        setMarca("");
+        setModelo("");
+        setTipo("");
+        setColor("");
+           
+        Swal.fire({
+          icon: "success",
+          title: "¡Inserción correcta!",
+          text: "Datos del veiculo insertados correctamente",
+        });   
+      } else {
+        console.log("Error fech");
+        throw new Error('Error al agregar objeto');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Error al agregar objeto');
+    });
+
+        
+     
+  }
+       
+
+    
+} catch (error) {
+        console.log(error);
+    }
+}
+const handlebastidor=(e)=>{
+  e.preventDefault();
+  setNBastidor(nbastidoraletorio());
+}
   return (
     <>
     <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-  <form onSubmit={handleSubmit}>
+  <form >
     <div className="mb-4">
-      <label htmlFor="Bastidor" className="block text-gray-700 text-sm font-bold mb-2">Bastidor:</label>
-      <input type="text" id="Bastidor" name="Bastidor" value={nbastidor} onChange={(e) => setNBastidor(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+    <label htmlFor="Bastidor" className="block text-gray-700 text-sm font-bold mb-2">Bastidor:</label>
+      <input type="text" id="Bastidor" name="Bastidor" value={nbastidor} readOnly={true} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+      <button onClick={handlebastidor} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline text-xs">Generar bastidor</button>
     </div>
     <div className="mb-4">
       <label htmlFor="marca" className="block text-gray-700 text-sm font-bold mb-2">Marca:</label>
-      <input type="marca" id="marca" name="marca" value={marca} onChange={(e) => setMarca(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+      <input type="text" id="marca" name="marca" value={marca} onChange={(e) => setMarca(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+    </div>
+    <div className="mb-4">
+      <label htmlFor="modelo" className="block text-gray-700 text-sm font-bold mb-2">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" value={modelo} onChange={(e) => setModelo(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
     </div>
     <div className="mb-4">
       <label htmlFor="tipo" className="block text-gray-700 text-sm font-bold mb-2">Tipo:</label>
-      <select id="motivo" name="motivo" value={tipo} onChange={(e) => setTipo(e.target.value)} className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${tipo === 'motocicleta' ? 'text-gray-500' : tipo === 'coche' ? 'text-blue-500' : 'text-amber-900'}`}>
+      <select id="motivo" name="motivo" value={tipo} onChange={(e) => setTipo(e.target.value)} className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${tipo === 'motocicleta' ? 'text-gray-500' : tipo === 'coche' ? 'text-blue-500' : 'text-green-500'}`}>
         <option className="text-gray-800 " value="motocicleta">motocicleta</option>
         <option className="text-blue-800 "  value="coche">coche</option>
         <option className="text-amber-900 "  value="camion">camion</option>
@@ -50,7 +145,7 @@ const FormAltas = () => {
       <input type="text" id="color" name="color" value={color} onChange={(e) => setColor(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
     </div>
     
-    <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar</button>
+    <button type="submit"  onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar</button>
   </form>
 </div>
 
