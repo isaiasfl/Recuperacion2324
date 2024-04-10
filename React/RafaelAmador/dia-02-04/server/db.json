@@ -39,6 +39,16 @@
       "color": "gris",
       "fecha": "09/04/2024",
       "matricula": "2001VYZ"
+    },
+    {
+      "id": "7623",
+      "bastidor": "1783563997202094",
+      "marca": "Audi",
+      "modelo": "A4",
+      "tipo": "Coche",
+      "color": "blanco",
+      "fecha": "10/04/2024",
+      "matricula": "5695PIH"
     }
   ]
 }
