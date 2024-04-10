@@ -4,13 +4,14 @@ import getdata from "../helpers/getdata";
 import generarMatricula from "../helpers/generarmatriculas";
 import obtenerFechaActual from "../helpers/generadorfechas";
 import nbastidoraletorio from "../helpers/nbastidoraleatorio";
+
 // nºvastidor,marca,modelo ,tipo(motocicleta,coche,camion),color,fecha de alta
 
 const FormAltas = () => {
     const [nbastidor, setNBastidor] = useState("");
     const [marca, setMarca] = useState("");
     const [modelo, setModelo] = useState("");
-    const [tipo, setTipo] = useState("");
+    const [tipo, setTipo] = useState("motocicleta");
     const [color, setColor] = useState("");
     let matriculaAleatoria="";
     let fechaactual= "";
@@ -70,43 +71,90 @@ const handleSubmit=async(e)=>{
      
 
     // Realizar la solicitud POST al endpoint "altas"
-    fetch('http://localhost:4000/altas', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newALta)
-    })
-    .then(response => {
-      if (response.ok) {
-        // Limpiar el estado del formulario si la solicitud es exitosa
+    // fetch('http://localhost:4000/altas', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(newALta)
+    // })
+    // .then(response => {
+    //   if (response.ok) {
+      
+           
+    //     Swal.fire({
+    //       icon: "success",
+    //       title: `¡Inserción correcta!    Matricula asignada :${matriculaAleatoria}`,
+    //       text: `Datos del veiculo insertados correctamente :
+    //       Datos: 
+    //       NºBastidor: ${nbastidor},
+    //       Marca:${marca},
+    //       Modelo:${modelo},
+    //       Tipo:${tipo},
+    //       Color:${color}
+    //       `
+    //     }); 
+        
+    //     // Limpiar el estado del formulario si la solicitud es exitosa
+    //     setNBastidor("");
+    //     setMarca("");
+    //     setModelo("");
+    //     setTipo("");
+    //     setColor("");
+    //   } else {
+    //     console.log("Error fech");
+    //     throw new Error('Error al agregar objeto');
+    //   }
+    // })
+    // .catch(error => {
+    //   console.error('Error:', error);
+    //   alert('Error al agregar objeto');
+    // });
+
+    Swal.fire({
+      title: `Matricula asignada: ${matriculaAleatoria}`,
+   
+      icon: 'warning',
+      html: `
+      <strong>Datos:</strong><br>
+     <h2> Nº Bastidor:<b> ${nbastidor}</b></h2>
+     <p>
+      Marca: <b>${marca}</b><br>
+      Modelo:<b> ${modelo}</b><br>
+      Tipo:<b> ${tipo}</b><br>
+      Color:<b> ${color}</b></p>`,
+      showCancelButton: true,
+      confirmButtonText: 'Aceptar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch('http://localhost:4000/altas', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+        },
+          body: JSON.stringify(newALta)
+        })
+        Swal.fire({
+          title: "Datos aceptados",
+          icon: "success"
+        });
         setNBastidor("");
         setMarca("");
         setModelo("");
         setTipo("");
         setColor("");
-           
-        Swal.fire({
-          icon: "success",
-          title: "¡Inserción correcta!",
-          text: "Datos del veiculo insertados correctamente",
-        });   
-      } else {
-        console.log("Error fech");
-        throw new Error('Error al agregar objeto');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        setNBastidor("");
+            setMarca("");
+            setModelo("");
+            setTipo("");
+            setColor("");
       }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('Error al agregar objeto');
     });
-
-        
      
   }
-       
-
-    
+  
 } catch (error) {
         console.log(error);
     }
@@ -117,7 +165,7 @@ const handlebastidor=(e)=>{
 }
   return (
     <>
-    <div className="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div className="max-w-md mx-auto bg-white  shadow-lg  rounded px-8 pt-9 pb-8 mb-4">
   <form >
     <div className="mb-4">
     <label htmlFor="Bastidor" className="block text-gray-700 text-sm font-bold mb-2">Bastidor:</label>

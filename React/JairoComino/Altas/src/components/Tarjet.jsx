@@ -24,7 +24,7 @@ function Tarjet({vehiculo}) {
            className={`m-4 p-6 rounded-lg shadow-lg  ${getColorClass(vehiculo.tipo)}`}
             style={{ width: '300px' }}
             >
-                <h2 className="text-2xl font-semibold">{vehiculo.nbastidor}</h2>
+                <h2 className="text-2xl font-semibold"> NºBastidor: {vehiculo.nbastidor}</h2>
                 <p><strong>Modelo:</strong> {vehiculo.modelo}</p>
                 <p><strong>Marca:</strong> {vehiculo.marca}</p>
                 <p><strong>Color:</strong> {vehiculo.color}</p>

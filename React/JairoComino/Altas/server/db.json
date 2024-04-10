@@ -49,6 +49,76 @@
       "color": "blanco",
       "fecha": "2024-04-03",
       "matricula": "4813SAE"
+    },
+    {
+      "id": "ad15",
+      "nbastidor": "a0HWTL0SvmM71nki",
+      "marca": "mazda",
+      "modelo": "rx-7",
+      "tipo": "coche",
+      "color": "naranga",
+      "fecha": "2024-04-09",
+      "matricula": "3228LNU"
+    },
+    {
+      "id": "897f",
+      "nbastidor": "wLiFWmzD4IXJt9rt",
+      "marca": "Honda",
+      "modelo": "CBR650R",
+      "tipo": "motocicleta",
+      "color": "rojo",
+      "fecha": "2024-04-09",
+      "matricula": "0400NBM"
+    },
+    {
+      "id": "5565",
+      "nbastidor": "pJgrk8o8Ulx2f85Z",
+      "marca": " Yamaha",
+      "modelo": "MT-10",
+      "tipo": "motocicleta",
+      "color": "negro",
+      "fecha": "2024-04-09",
+      "matricula": "1460WYQ"
+    },
+    {
+      "id": "2c58",
+      "nbastidor": "Clm92oMyxpUuaKz9",
+      "marca": "renault",
+      "modelo": "5 copa turbo",
+      "tipo": "coche",
+      "color": "gris",
+      "fecha": "2024-04-09",
+      "matricula": "2886TJV"
+    },
+    {
+      "id": "0ea9",
+      "nbastidor": "W5zmwXbQj5iZijjC",
+      "marca": "Seat",
+      "modelo": "ibiza",
+      "tipo": "coche",
+      "color": "negro",
+      "fecha": "2024-04-09",
+      "matricula": "3465BAZ"
+    },
+    {
+      "id": "12de",
+      "nbastidor": "z0qcHoM3xJZuuJ0N",
+      "marca": "Scania",
+      "modelo": "Serie R",
+      "tipo": "camion",
+      "color": "negro",
+      "fecha": "2024-04-09",
+      "matricula": "3331WXA"
+    },
+    {
+      "id": "2f1a",
+      "nbastidor": "7Bai03DsqpIiYE0t",
+      "marca": "Seat",
+      "modelo": "124",
+      "tipo": "coche",
+      "color": "negro",
+      "fecha": "2024-04-10",
+      "matricula": "2130HVO"
     }
   ]
 }

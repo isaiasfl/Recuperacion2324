@@ -2,7 +2,7 @@
 
 const getdata= async(apiUrl)=>{
     try{
-        //voy a realizar una petición a pokeapi
+        //voy a realizar una petición a api
 		const response= await fetch(apiUrl);
         const data = await response.json();
         // console.log("data es ", data);

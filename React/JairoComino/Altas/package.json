@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "json_server": "json-server --watch server/db.json --port 4000",
+    "lanzar": "start /B npm run json_server && vite",
     "preview": "vite preview"
   },
   "dependencies": {
