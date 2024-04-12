@@ -1,0 +1,28 @@
+{
+  "altas": [
+    {
+      "id": 1,
+      "num": "abc123456789abc",
+      "tipo": "coche",
+      "fechaAlta": "2010-11-18",
+      "color": "Blanco",
+      "matricula": "1234-ABC"
+    },
+    {
+      "id": 2,
+      "num": "cba123456789abc",
+      "tipo": "moto",
+      "fechaAlta": "2014-02-21",
+      "color": "Negra",
+      "matricula": "5678-CBA"
+    },
+    {
+      "id": 3,
+      "num": "cba987656789abc",
+      "tipo": "camion",
+      "fechaAlta": "2020-03-31",
+      "color": "Azul",
+      "matricula": "9876-CBA"
+    }
+  ]
+}

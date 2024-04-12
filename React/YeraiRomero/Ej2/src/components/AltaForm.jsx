@@ -1,8 +1,8 @@
 const AltaForm = () => {
   return (
-    <div>
-      <h1>Dar de alta un vehículo</h1>
-      <form>
+    <div className="alta-form-div">
+      <h2>Dar de alta un vehículo</h2>
+      <form className="alta-form">
         <label>Matrícula</label>
         <input type="text" />
         <label>Marca</label>
