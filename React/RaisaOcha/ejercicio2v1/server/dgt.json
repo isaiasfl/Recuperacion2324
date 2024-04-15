@@ -1,14 +1,63 @@
 {
   "altas": [
     {
-      "id": 1,
+      "id": "1",
       "numBastidor": "4595",
-      "brand": "Renault",
+      "": "Renault",
       "model": "Scenic",
-      "type": "Coche",
+      "type": "coche",
       "color": "azul",
       "registrationDate": "02/04/2024",
-      "matricula": "1234ABC"
+      "plate": "1234ABC"
+    },
+    {
+      "id": "718c",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "fiesta",
+      "type": "coche",
+      "color": "gris",
+      "registrationDate": "2/4/2024",
+      "plate": "MZC2301"
+    },
+    {
+      "id": "7679",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "fiesta",
+      "type": "camión",
+      "color": "gris",
+      "plate": "CVK7685"
+    },
+    {
+      "id": "93eb",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "fiesta",
+      "type": "camión",
+      "color": "gris",
+      "registrationDate": "2/4/2024",
+      "plate": "WUK1624"
+    },
+    {
+      "id": "4b74",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "ersh",
+      "type": "motocicleta",
+      "color": "gris",
+      "registrationDate": "2/4/2024",
+      "plate": "RYF2962"
+    },
+    {
+      "id": "d752",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "ersh",
+      "type": "coche",
+      "color": "gris",
+      "registrationDate": "2/4/2024",
+      "plate": "UCA5909"
     }
   ]
 }

@@ -1,22 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Swal from 'sweetalert2';
+import GenerateRandomPlate from "../helpers/funcionesCrud/GenerateRandomPlate";
+import GenerateRandomChassis from "../helpers/funcionesCrud/GenerateRandomChassis";
 
 const AddVehicleForm = () => {
-  const [numBastidor, setNumBastidor] = useState('');
   const [brand, setBrand] = useState('');
   const [model, setModel] = useState('');
   const [type, setType] = useState('');
   const [color, setColor] = useState('');
   const [registrationDate, setRegistrationDate] = useState('');
-
   const [errors, setErrors] = useState({});
 
+    useEffect(() => {
+    const today = new Date();
+    const formattedDate = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+    setRegistrationDate(formattedDate);
+  }, []);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const errors = {};
-    if (!numBastidor.trim()) {
-      errors.numBastidor = 'Número de bastidor es requerido';
-    }
     if (!brand.trim()) {
       errors.brand = 'Marca es requerida';
     }
@@ -33,52 +36,91 @@ const AddVehicleForm = () => {
       errors.registrationDate = 'Fecha de registro es requerida';
     }
     if (Object.keys(errors).length > 0) {
-      setErrors(errors);
+      let errorMessage = '<ul>';
+      for (const key in errors) {
+        errorMessage += `<li>${errors[key]}</li>`;
+      }
+      errorMessage += '</ul>';
+      
+      Swal.fire({
+        icon: 'error',
+        title: 'Error en el formulario',
+        html: errorMessage
+      });
       return;
     }
-    const modalContent = `
-      <p><strong>Número de bastidor:</strong> ${numBastidor}</p>
-      <p><strong>Marca:</strong> ${brand}</p>
-      <p><strong>Modelo:</strong> ${model}</p>
-      <p><strong>Tipo:</strong> ${type}</p>
-      <p><strong>Color:</strong> ${color}</p>
-      <p><strong>Fecha de registro:</strong> ${registrationDate}</p>
-    `;
+
+    saveToJSON();
+
     Swal.fire({
       title: 'Información del formulario',
-      html: modalContent,
+      html: generateModalContent(),
       icon: 'info',
       showCancelButton: true,
       confirmButtonText: 'Aceptar',
       cancelButtonText: 'Cancelar'
     })
 
-    setNumBastidor('');
     setBrand('');
     setModel('');
     setType('');
     setColor('');
-    setRegistrationDate('');
     setErrors({});
   };
+
+  const generateModalContent = () => {
+    return `
+      <p><strong>Número de bastidor:</strong> ${GenerateRandomChassis()}</p>
+      <p><strong>Marca:</strong> ${brand}</p>
+      <p><strong>Modelo:</strong> ${model}</p>
+      <p><strong>Tipo:</strong> ${type}</p>
+      <p><strong>Color:</strong> ${color}</p>
+      <p><strong>Fecha de registro:</strong> ${registrationDate}</p>
+      <p><strong>Matrícula:</strong> ${GenerateRandomPlate()}</p>
+    `;
+  };
+
+  const saveToJSON = () => {
+    const formData = {
+      chassis: GenerateRandomChassis(),
+      brand,
+      model,
+      type,
+      color,
+      registrationDate,
+      plate: GenerateRandomPlate()
+    };
+    const jsonData = JSON.stringify(formData);
+
+    fetch('http://localhost:4000/altas', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: jsonData
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log('Datos guardados correctamente');
+      } else {
+        console.error('Error al guardar los datos:', response.status);
+      }
+    })
+    .catch(error => {
+      console.error('Error al enviar la solicitud:', error);
+    });
+  };
+
 
   return (
     <div className="container mx-auto p-4 bg-slate-100 rounded">
       <h1 className="text-2xl font-bold mb-4 ">Formulario de Registro de Vehículos</h1>
-      <form onSubmit={handleSubmit}>
         <div className="mb-4 ">
           <label className="block text-gray-700 mb-1" htmlFor="numBastidor">
-            Número de bastidor
+            El numero de bastidor será generado automáticamente
           </label>
-          <input
-            type="text"
-            id="numBastidor"
-            className="form-input w-full"
-            value={numBastidor}
-            onChange={(e) => setNumBastidor(e.target.value)}
-          />
-          {errors.numBastidor && <p className="text-red-500">{errors.numBastidor}</p>}
         </div>
+      <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700 mb-1" htmlFor="brand">
             Marca
@@ -135,16 +177,17 @@ const AddVehicleForm = () => {
           />
           {errors.color && <p className="text-red-500">{errors.color}</p>}
         </div>
-        <div className="mb-4">
+         <div className="mb-4">
           <label className="block text-gray-700 mb-1" htmlFor="registrationDate">
             Fecha de registro
           </label>
           <input
-            type="date"
+            type="text"
             id="registrationDate"
             className="form-input w-full"
             value={registrationDate}
             onChange={(e) => setRegistrationDate(e.target.value)}
+            disabled
           />
           {errors.registrationDate && <p className="text-red-500">{errors.registrationDate}</p>}
         </div>
@@ -156,7 +199,7 @@ const AddVehicleForm = () => {
   );
 };
 
-export default AddVehicleForm
+export default AddVehicleForm;
 
 
 
