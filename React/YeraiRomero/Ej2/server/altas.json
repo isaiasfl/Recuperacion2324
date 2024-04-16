@@ -24,5 +24,53 @@
       "color": "Azul",
       "matricula": "9876-CBA"
     }
-  ]
+  ],
+  "noticias": [
+    {
+      "titulo": "Noticia 1",
+      "texto": "Texto da notícia 1",
+      "url_img": "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "titulo": "Noticia 2",
+      "texto": "Texto da notícia 2",
+      "url_img": "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "titulo": "Noticia 3",
+      "texto": "Texto da notícia 3",
+      "url_img": "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "titulo": "Noticia 4",
+      "texto": "Texto da notícia 4",
+      "url_img": "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "titulo": "Noticia 5",
+      "texto": "Texto da notícia 5",
+      "url_img": "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "titulo": "Noticia 6",
+      "texto": "Texto da notícia 6",
+      "url_img": "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "titulo": "Noticia 7",
+      "texto": "Texto da notícia 7",
+      "url_img": "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "titulo": "Noticia 8",
+      "texto": "Texto da notícia 8",
+      "url_img": "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "titulo": "Noticia 9",
+      "texto": "Texto da notícia 9",
+      "url_img": "https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    }
+  ],
+  "imagenes": []
 }
