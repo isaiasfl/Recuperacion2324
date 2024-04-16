@@ -1,0 +1,22 @@
+{
+    "info":[
+        {
+        "id":"",
+        "noticias":[
+            {
+            "idnoticia":"1",
+            "titulo":"Primera noticia",
+            "texto":"Esta es la primera noticia",
+            "fecha":"",
+            "urlimagen":""
+            }
+        ],
+        "imagenes":[
+            {
+            "id":"1",
+            "url":""
+            }
+        ]
+        }
+    ]
+}
