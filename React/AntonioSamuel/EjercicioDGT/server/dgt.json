@@ -1,14 +1,64 @@
 {
-    "altas": [
-        {
-            "id": 1,
-            "nbastidor": "12345",
-            "marca": "Renault",
-            "modelo": "scenic",
-            "tipo": "coche",
-            "color": "azul",
-            "fechaAlta": "02/04/2024",
-            "matricula": "1234ABC"
-        }
-    ]
+  "altas": [
+    {
+      "id": "1",
+      "bastidor": "12345",
+      "marca": "Renault",
+      "modelo": "scenic",
+      "tipo": "coche",
+      "color": "azul",
+      "fechaAlta": "02/04/2024",
+      "matricula": "1234ABC"
+    },
+    {
+      "id": "1",
+      "bastidor": "OO589BC1C9AAOF74U",
+      "marca": "Mercedes",
+      "modelo": "Clase A",
+      "tipo": "coche",
+      "color": "Blanco",
+      "fechaAlta": "09/04/2024",
+      "matricula": "0626LDA"
+    },
+    {
+      "id": "2",
+      "bastidor": "WZOUH0JATB0EOIXWD",
+      "marca": "Seat",
+      "modelo": "Leon",
+      "tipo": "coche",
+      "color": "Negro",
+      "fechaAlta": "09/04/2024",
+      "matricula": "8964YVY"
+    },
+    {
+      "id": "22f5",
+      "bastidor": "8P0QWMETQSZTMN0BS",
+      "marca": "BMW",
+      "modelo": "Serie 1",
+      "tipo": "coche",
+      "color": "Azul oscuro",
+      "fechaAlta": "10/04/2024",
+      "matricula": "4624CFD"
+    },
+    {
+      "id": "5aad",
+      "bastidor": "MLBBF16C55UIND7KE",
+      "marca": "Iveco",
+      "modelo": "Eurocargo",
+      "tipo": "camion",
+      "color": "Blanco",
+      "fechaAlta": "16/04/2024",
+      "matricula": "3338NGY"
+    },
+    {
+      "id": "ea4c",
+      "bastidor": "KJ4IEOXYS1EECQMK8",
+      "marca": "Yamaha",
+      "modelo": "MT-09",
+      "tipo": "moto",
+      "color": "Rojo",
+      "fechaAlta": "16/04/2024",
+      "matricula": "8608TJB"
+    }
+  ]
 }

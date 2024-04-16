@@ -6,8 +6,8 @@ const HomePage = () => {
   return (
     <div className="flex flex-row p-2 m-1">
       <div className="flex flex-col w-1/2 mx-1 p-1">
-        {/* <TareasForm /> */}
-        {/* <InfoTareas /> */}
+        <TareasForm />
+        <InfoTareas />
       </div>
       <div className="flex flex-col w-1/2">
         <ShowTareas />
