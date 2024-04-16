@@ -46,4 +46,4 @@ c. La página de registro nos mostrarán una serie de campos a rellenar y al fin
 
 - El endpoint donde se guardarán los datos será /USUARIOS.
 - Los campos de la página, y los campos del endpoint, serán " dni ", " username ", " password " y " fecha nacimiento ".
-- Las condiciones necesarias para poder registrarse serán que ni el dni a guardar ni el usuario a guardar esten repetidos en la base de datos.
+- Las condiciones necesarias para poder registrarse serán que ni el dni a guardar ni el usuario a guardar esten repetidos en la base de datos.  
