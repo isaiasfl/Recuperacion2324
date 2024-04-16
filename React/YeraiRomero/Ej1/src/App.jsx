@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import TodoList from "./components/TodoList";
-import { db } from './utils/firebase';
 import { fetchTasks } from './utils/fetchTasks';
 import NewTaskForm from './components/NewTaskForm';
 import { addTask } from './utils/addTask';
