@@ -29,7 +29,12 @@ const ListaVehiculos = () => {
                     <option value="Camión">Camión</option>
                 </select>
             </div>
-            <Tarjeta />
+            <div>
+            {vehiculosFiltrados.map(vehiculo=>(
+                <Tarjeta key={vehiculo.id} vehiculo={vehiculo} />
+
+            ))}
+            </div>
         </div>
     );
 };
