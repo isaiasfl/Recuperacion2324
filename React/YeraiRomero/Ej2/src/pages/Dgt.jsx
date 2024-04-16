@@ -1,5 +1,5 @@
-import AltaForm from './AltaForm';
-import AltasView from './AltasView';
+import AltaForm from '../components/AltaForm';
+import AltasView from '../components/AltasView';
 // a components that contains two other components inside
 const Dgt = () => {
   return (
