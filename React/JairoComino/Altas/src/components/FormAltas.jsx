@@ -71,45 +71,45 @@ const handleSubmit=async(e)=>{
      
 
     // Realizar la solicitud POST al endpoint "altas"
-    // fetch('http://localhost:4000/altas', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(newALta)
-    // })
-    // .then(response => {
-    //   if (response.ok) {
+    fetch('http://localhost:4000/altas', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newALta)
+    })
+    .then(response => {
+      if (response.ok) {
       
            
-    //     Swal.fire({
-    //       icon: "success",
-    //       title: `¡Inserción correcta!    Matricula asignada :${matriculaAleatoria}`,
-    //       text: `Datos del veiculo insertados correctamente :
-    //       Datos: 
-    //       NºBastidor: ${nbastidor},
-    //       Marca:${marca},
-    //       Modelo:${modelo},
-    //       Tipo:${tipo},
-    //       Color:${color}
-    //       `
-    //     }); 
+        Swal.fire({
+          icon: "success",
+          title: `¡Inserción correcta!    Matricula asignada :${matriculaAleatoria}`,
+          text: `Datos del veiculo insertados correctamente :
+          Datos: 
+          NºBastidor: ${nbastidor},
+          Marca:${marca},
+          Modelo:${modelo},
+          Tipo:${tipo},
+          Color:${color}
+          `
+        }); 
         
-    //     // Limpiar el estado del formulario si la solicitud es exitosa
-    //     setNBastidor("");
-    //     setMarca("");
-    //     setModelo("");
-    //     setTipo("");
-    //     setColor("");
-    //   } else {
-    //     console.log("Error fech");
-    //     throw new Error('Error al agregar objeto');
-    //   }
-    // })
-    // .catch(error => {
-    //   console.error('Error:', error);
-    //   alert('Error al agregar objeto');
-    // });
+        // Limpiar el estado del formulario si la solicitud es exitosa
+        setNBastidor("");
+        setMarca("");
+        setModelo("");
+        setTipo("");
+        setColor("");
+      } else {
+        console.log("Error fech");
+        throw new Error('Error al agregar objeto');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Error al agregar objeto');
+    });
 
     Swal.fire({
       title: `Matricula asignada: ${matriculaAleatoria}`,

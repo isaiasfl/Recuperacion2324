@@ -120,5 +120,57 @@
       "fecha": "2024-04-10",
       "matricula": "2130HVO"
     }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "username": "jairo",
+      "password": "hlanz",
+      "DNI": "2376421S"
+    },
+    {
+      "id": "1bfc",
+      "username": "paco",
+      "password": "paco",
+      "DNI": "123454D"
+    },
+    {
+      "id": "cae9",
+      "username": "paca",
+      "password": "gqwee4hye5",
+      "DNI": "123454F"
+    }
+  ],
+  "info": [
+    {
+      "id": "1",
+      "titulo": "VMP: nuevas reglas, nueva formación",
+      "texto": "La nueva micromovilidad ha llegado para quedarse y el protagonista que está robando los titulares al resto de vehículos de movilidad personal es, sin duda, el patinete eléctrico. No es para menos: según datos de la Federación Española de Vehículos de Movilidad Personal ya hay unos 5 millones de patinetes eléctricos en España. Un auténtico boom si consideramos que hasta la crisis del coronavirus de 2020 a este medio para desplazarse se le consideraba poco menos que un juguete infantil. Pero ya no es así",
+      "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2024/VMP-nuevas-reglas-nueva-formacion/patinetes_detalle.jpg_793616401.jpg"
+    },
+    {
+      "id": "2",
+      "titulo": "Recomendaciones de tráfico",
+      "texto": "Viernes 22 de marzo de 2024 En este día dará comienzo el dispositivo especial de Semana Santa – 2024 a partir de las 15 horas, con la primera Operación SALIDA, en la que se prevén desplazamientos de largo recorrido por comienzo del período vacacional de Semana Santa, junto también, con los movimientos de corto recorrido motivados por el inicio de fin de semana",
+      "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/conoce-el-estado-del-trafico/recomendaciones.jpg_699956048.jpg"
+    },
+    {
+      "id": "3",
+      "titulo": "Restricciones a la circulación",
+      "texto": "Las autoridades competentes en materia de tráfico y seguridad vial disponen anualmente medidas especiales de regulación que restringen temporalmente la circulación de determinados vehículos en fechas y recorridos para los que se prevén desplazamientos masivos, con el fin de favorecer la seguridad vial, movilidad y fluidez de la circulación.",
+      "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/conoce-el-estado-del-trafico/restricciones_v2.jpg_699956048.jpg"
+    },
+    {
+      "id": "4",
+      "titulo": "Campañas de vigilancia",
+      "texto": "La programación y realización de las Campañas y Operaciones Especiales de vigilancia y control constituye una importante actividad de la DGT. ",
+      "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/conoce-la-dgt/que-hacemos/campanas-vigilancia/IMG-Portada.png_239029509.png"
+    },
+    {
+      "id": "5",
+      "titulo": "Carreteras auditadas por la IA",
+      "texto": "Una empresa tecnológica, cuyo nombre rinde homenaje al autor de “Yo, robot”, Isaac Asimov, diseña soluciones para vigilar el estado de las carreteras. Es la inteligencia artificial aplicada a mejorar la conservación y la seguridad de las vías públicas. ",
+      "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Carreteras-auditadas-por-la-IA/Foto_Artxanda_detalle.jpg_793616401.jpg"
+    }
   ]
 }
