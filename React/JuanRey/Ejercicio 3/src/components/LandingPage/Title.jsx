@@ -1,7 +1,11 @@
 
 const Title = () => {
     return (
-        <div> Titulo de Landing Page </div>
+        <div className=" bg-blue-400 rounded-md">
+            <h1 className="">
+                Landing Page
+            </h1>
+        </div>
     )
 }
 
