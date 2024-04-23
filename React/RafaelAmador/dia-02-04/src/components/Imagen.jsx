@@ -18,7 +18,7 @@ const Imagen = () => {
   fetchData();
   }, [])
   return (
-    <div><img src={imagen}/></div>
+    <div><img src={imagen} width="70%"/></div>
   )
 }
 
