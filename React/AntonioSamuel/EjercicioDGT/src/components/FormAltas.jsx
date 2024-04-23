@@ -18,7 +18,7 @@ const FormAltas = () => {
     const handleGenerateBastidor = async () => {
       const newBastidor = generadorBastidorAleatorio();
 
-      const bastidorDuplicado = await verificarDuplicadosApi('bastidor', newBastidor)
+      const bastidorDuplicado = await verificarDuplicadosApi('altas', 'bastidor', newBastidor)
 
       if (!bastidorDuplicado) {
         setBastidor(newBastidor)
@@ -38,7 +38,7 @@ const FormAltas = () => {
               fechaAlta : fechaActual,
               matricula : generarMatricula(),
           }
-          const matriculaDuplicada = await verificarDuplicadosApi('matricula', newVehiculo.matricula)
+          const matriculaDuplicada = await verificarDuplicadosApi('altas', 'matricula', newVehiculo.matricula)
 
           if (!matriculaDuplicada) {
             Swal.fire({
