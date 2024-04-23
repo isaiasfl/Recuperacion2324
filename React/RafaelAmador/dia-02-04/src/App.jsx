@@ -1,11 +1,12 @@
 import './App.css'
+import LandingPage from './pages/LandingPage'
 import MainPage from './pages/MainPage'
 
 function App() {
 
   return (
     <>
-     <MainPage />
+     <LandingPage />
     </>
   )
 }

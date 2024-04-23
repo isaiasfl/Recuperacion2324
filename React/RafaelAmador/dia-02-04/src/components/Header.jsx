@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <h1>D.G.T</h1>
+    <h1><img src="img/logo_dgt.svg" /></h1>
   )
 }
 
