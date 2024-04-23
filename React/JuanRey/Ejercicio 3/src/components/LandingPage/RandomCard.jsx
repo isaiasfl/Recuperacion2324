@@ -1,16 +1,4 @@
-import { useEffect, useState } from "react";
-
-const RandomCard = () => {
-    const [noticias, setNoticias] = useState([]);
-
-    useEffect(() => {
-        fetch('https://localhost:4000/info/noticias')
-        .then((response) => response.json())
-        .then((data) => setNoticias(data))
-        .catch((error) => console.error("Error al obtener las noticias: " + error));
-    }, []);
-
-    // Función para obtener un array con las posiciones aleatorias
+const RandomCard = ({ noticias }) => {
     const shuffleArray = (array) => {
         const shuffledArray = [...array];
         for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -24,18 +12,15 @@ const RandomCard = () => {
     const noticiasAleatorias = shuffleArray(noticias);
 
     return (
-        <div>
-            {/* Renderizar las noticias con posiciones aleatorias */}
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:w-70">
             {noticiasAleatorias.map((noticia) => (
-                <div key={noticia.idnoticia}>
-                    <h2>{noticia.titulo}</h2>
-                    <p>{noticia.texto}</p>
-                    <img>{noticia.img}</img>
-                    {/* Puedes añadir la imagen asociada a la noticia aquí */}
+                <div key={noticia.idnoticia} className="bg-white rounded-md p-4">
+                    <h2 className="text-lg font-semibold mb-2">{noticia.titulo}</h2>
+                    <p className="mb-4">{noticia.texto}</p>
+                    <img src={noticia.urlimagen} alt={noticia.titulo} className="w-full h-auto" />
                 </div>
             ))}
         </div>
     );
 };
-
 export default RandomCard;

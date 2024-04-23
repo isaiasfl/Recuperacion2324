@@ -7,28 +7,28 @@
                     "titulo": "La DGT implementará nuevas medidas de seguridad vial",
                     "texto": "La Dirección General de Tráfico anuncia la implementación de nuevas medidas para mejorar la seguridad vial en las carreteras españolas.",
                     "fecha": "2024-04-14",
-                    "urlimagen": "https://example.com/noticia1.jpg"
+                    "urlimagen": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2024/VMP-nuevas-reglas-nueva-formacion/patinetes_detalle.jpg_793616401.jpg"
                 },
                 {
                     "idnoticia": "2",
                     "titulo": "Aumento de los controles de velocidad en autopistas",
                     "texto": "La DGT anuncia un aumento en los controles de velocidad en las autopistas con el objetivo de reducir los accidentes.",
                     "fecha": "2024-04-13",
-                    "urlimagen": "https://example.com/noticia2.jpg"
+                    "urlimagen": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Carreteras-auditadas-por-la-IA/Foto_Artxanda_listado.jpg"
                 },
                 {
                     "idnoticia": "3",
                     "titulo": "Campaña de concienciación sobre el uso del cinturón de seguridad",
                     "texto": "La DGT lanza una campaña de concienciación para promover el uso del cinturón de seguridad entre los conductores y pasajeros.",
                     "fecha": "2024-04-12",
-                    "urlimagen": "https://example.com/noticia3.jpg"
+                    "urlimagen": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Transportistas-una-profesion-con-todo-el-sentido/transportistas_listado.jpg"
                 },
                 {
                     "idnoticia": "4",
                     "titulo": "Nuevas medidas para combatir la conducción bajo los efectos del alcohol",
                     "texto": "La DGT anuncia nuevas medidas para combatir la conducción bajo los efectos del alcohol, incluyendo controles más estrictos y sanciones más severas.",
                     "fecha": "2024-04-11",
-                    "urlimagen": "https://example.com/noticia4.jpg"
+                    "urlimagen": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/noticias/Frenos-Como-usarlos-correctamente/frenos-listado.jpg"
                 },
                 {
                     "idnoticia": "5",
@@ -50,69 +50,36 @@
                     "texto": "La DGT presenta nuevas señales de tráfico diseñadas para mejorar la seguridad en las ciudades y reducir el riesgo de accidentes.",
                     "fecha": "2024-04-08",
                     "urlimagen": "https://example.com/noticia7.jpg"
-                },
-                {
-                    "idnoticia": "8",
-                    "titulo": "Ampliación del número de radares de tráfico",
-                    "texto": "La DGT anuncia la ampliación del número de radares de tráfico en las carreteras españolas, como parte de su estrategia para reducir la velocidad y mejorar la seguridad vial.",
-                    "fecha": "2024-04-07",
-                    "urlimagen": "https://example.com/noticia8.jpg"
-                },
-                {
-                    "idnoticia": "9",
-                    "titulo": "Campaña de sensibilización sobre el respeto a los peatones",
-                    "texto": "La DGT lanza una campaña de sensibilización para promover el respeto a los peatones en las zonas urbanas y reducir el número de atropellos.",
-                    "fecha": "2024-04-06",
-                    "urlimagen": "https://example.com/noticia9.jpg"
-                },
-                {
-                    "idnoticia": "10",
-                    "titulo": "DGT instala nuevas cámaras de vigilancia en carreteras secundarias",
-                    "texto": "La Dirección General de Tráfico anuncia la instalación de nuevas cámaras de vigilancia en carreteras secundarias para mejorar la seguridad y prevenir accidentes.",
-                    "fecha": "2024-04-05",
-                    "urlimagen": "https://example.com/noticia10.jpg"
                 }
             ],
             "imagenes": [
                 {
                     "id": "1",
-                    "url": "https://example.com/img1.jpg"
+                    "url": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2024/VMP-nuevas-reglas-nueva-formacion/patinetes_detalle.jpg_793616401.jpg"
                 },
                 {
                     "id": "2",
-                    "url": "https://example.com/img2.jpg"
+                    "url": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Carreteras-auditadas-por-la-IA/Foto_Artxanda_listado.jpg"
                 },
                 {
                     "id": "3",
-                    "url": "https://example.com/img3.jpg"
+                    "url": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Transportistas-una-profesion-con-todo-el-sentido/transportistas_listado.jpg"
                 },
                 {
                     "id": "4",
-                    "url": "https://example.com/img4.jpg"
+                    "url": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/noticias/Frenos-Como-usarlos-correctamente/frenos-listado.jpg"
                 },
                 {
                     "id": "5",
-                    "url": "https://example.com/img5.jpg"
+                    "url": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/Imagen_255x240-recomendacionesV3.png"
                 },
                 {
                     "id": "6",
-                    "url": "https://example.com/img6.jpg"
+                    "url": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Sueno-conduccion-pesadilla-en-la-carretera/conductor_listado.jpg"
                 },
                 {
                     "id": "7",
-                    "url": "https://example.com/img7.jpg"
-                },
-                {
-                    "id": "8",
-                    "url": "https://example.com/img8.jpg"
-                },
-                {
-                    "id": "9",
-                    "url": "https://example.com/img9.jpg"
-                },
-                {
-                    "id": "10",
-                    "url": "https://example.com/img10.jpg"
+                    "url": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/Imagen_255x240-controlTrafico.png"
                 }
             ]
         }
