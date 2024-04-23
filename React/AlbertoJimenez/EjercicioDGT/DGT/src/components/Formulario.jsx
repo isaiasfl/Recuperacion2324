@@ -3,6 +3,8 @@ import Button from "./Button";
 import genBastidor from "../helpers/genBastidor";
 import genMatricula from "../helpers/genMatricula";
 import {format } from "date-fns";
+import addVehicle from "../helpers/addVehicle";
+import Swal from 'sweetalert2';
 
 
 const Formulario = () => {
@@ -16,39 +18,46 @@ const Formulario = () => {
     const fechaActual = format(new Date(), 'dd/MM/yyyy');
 
 
-    const handleAddVehicle = () => {
+    const handleAddVehicle = (e) => {
+      e.preventDefault();
       const newVehicle = {
-          nBastidor : genBastidor(),
+          nBastidor : bastidor,
           marca: marca,
           modelo: modelo,
-          tipoVehiculo: tipoVehiculo,
+          tipo: tipoVehiculo,
           color: color,
-          fecha: fechaActual(),
-          matricula: genMatricula()
+          fecha: fechaActual,
+          matricula: genMatricula(),
       };
-    
+  
+      addVehicle('http://localhost:4000/altas', newVehicle, (info) => {
+          if (info) {
+            Swal.fire({
+              icon: "success",
+              title: "¡Inserción correcta!",
+              text: `Vehiculo añadido correctamente con la matricula ${newVehicle.matricula}`,
+            })
 
-    }
+
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Error al insertar!",
+              text: "Vehiculo no añadido",
+            });
+          }
+      });
+
+      console.log("q11111111111");
+  }
+  
 
 
     return (
 <div className=" flex flex-col items-start">
     <h2 className=" text-xl ">Registro de Vehículos</h2>
     
-    <form className="flex flex-col items-start">
-
-      <label htmlFor="matricula">Matricula:</label>
-      <div className="flex items-center mb-4">
-        <input
-          type="text"
-          id="matricula"
-          value={matricula}
-          onChange={(e) => setMatricula(e.target.value)}
-          className="border border-gray-300 rounded-md p-2 mr-2"
-          required
-        />
-        <Button onClick={genMatricula} texto="Generar"></Button>
-      </div>
+    <form type="submit" className="flex flex-col items-start">
 
       <label htmlFor="bastidor">Bastidor:</label>
       <div className="flex items-center mb-4">
@@ -106,9 +115,10 @@ const Formulario = () => {
         required
       />
 
-      <Button onClick={handleAddVehicle} texto="Guardar"></Button>
+      <button onClick={handleAddVehicle} >Guardar</button>
+      {/* <Button onClick={handleAddVehicle} texto="Guardar"></Button> */}
     </form>
-    {console.log("MAT",genMatricula())}
+    
 </div>
 
     );

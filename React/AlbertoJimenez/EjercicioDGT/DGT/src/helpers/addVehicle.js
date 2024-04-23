@@ -1,4 +1,4 @@
-export default function createPostAPI(url, postData, callback){
+export default function addVehicle(url, postData, callback){
     fetch(url, {
         method: 'POST',
         headers: {"Content-Type":"application/json"},
@@ -6,12 +6,13 @@ export default function createPostAPI(url, postData, callback){
     })
     .then(response =>{
         if(response.ok){
+            console.log("Inserción correcta en addvehicle: " );
             return response.json();
         }else{
+            alert("error")
             throw new Error("Error el añadir datos")
         }
     })
-
     .then(data => callback(data))
     .catch(error => console.error("Error Insertando datos", error));
 }

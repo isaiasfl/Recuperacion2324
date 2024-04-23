@@ -1,7 +1,8 @@
 
 const Card2 = ({vehiculo}) => {
     const {nBastidor, marca, modelo, tipo, color, fecha, matricula} = vehiculo ;
-    const tipoVehiculo = vehiculo.tipo.toLowerCase();
+    console.log("----",vehiculo);
+    const tipoVehiculo = vehiculo && vehiculo.tipo.toLowerCase();
      console.log("VECHIULO ->", vehiculo);
 
 

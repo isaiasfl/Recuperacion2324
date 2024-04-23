@@ -1,12 +1,152 @@
 {
-    "altas":[
-        {"id": 1,
-        "nBastidor" :"47895",
-        "marca" : "Renault",
-        "modelo": "Scenic",
-        "tipo" : "coche",
-        "color" : "azul",
-        "fecha" : "02/04/2024",
-        "matricula" : "1234ABC"  }
-    ]
-}
+  "altas": [
+    {
+      "id": 1,
+      "nBastidor": "47895",
+      "marca": "Renault",
+      "modelo": "Scenic",
+      "tipo": "coche",
+      "color": "azul",
+      "fecha": "02/04/2024",
+      "matricula": "1234ABC"
+    },
+    {
+      "id": "854d",
+      "nBastidor": "1234567897894sdfd",
+      "marca": "Audi",
+      "modelo": "a2",
+      "tipo": "Coche",
+      "color": "Blanco",
+      "fecha": "16/04/2024",
+      "matricula": "4691ZWS"
+    },
+    {
+      "id": "03da",
+      "nBastidor": "dsA",
+      "marca": "a",
+      "modelo": "",
+      "tipo": "Motocicleta",
+      "color": "asd",
+      "fecha": "16/04/2024",
+      "matricula": "9429KPY"
+    },
+    {
+      "id": "768d",
+      "nBastidor": "dsA",
+      "marca": "a",
+      "modelo": "a2",
+      "tipo": "Motocicleta",
+      "color": "asd",
+      "fecha": "16/04/2024",
+      "matricula": "1156VXV"
+    },
+    {
+      "id": "4e1c",
+      "nBastidor": "isaias",
+      "marca": "a",
+      "modelo": "a2",
+      "tipo": "Motocicleta",
+      "color": "asd",
+      "fecha": "16/04/2024",
+      "matricula": "4268NPB"
+    },
+    {
+      "id": "342d",
+      "nBastidor": "1234567897894sdfd",
+      "marca": "Mercedes",
+      "modelo": "xfh",
+      "tipo": "Camion",
+      "color": "negro",
+      "fecha": "23/04/2024",
+      "matricula": "7472CTS"
+    },
+    {
+      "id": "8b01",
+      "nBastidor": "1234567897894sdff",
+      "marca": "Mercedes",
+      "modelo": "xfh",
+      "tipo": "Camion",
+      "color": "negro",
+      "fecha": "23/04/2024",
+      "matricula": "5629ZGX"
+    },
+    {
+      "id": "b487",
+      "nBastidor": "1234567897895sdff",
+      "marca": "Mercedes",
+      "modelo": "xfh",
+      "tipo": "Camion",
+      "color": "negro",
+      "fecha": "23/04/2024",
+      "matricula": "3720DSV"
+    },
+    {
+      "id": "f547",
+      "nBastidor": "1234567397895sdff",
+      "marca": "Mercedes",
+      "modelo": "xfh",
+      "tipo": "Motocicleta",
+      "color": "negro",
+      "fecha": "23/04/2024",
+      "matricula": "1228PDP"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "Malpiica",
+      "password": "1234",
+      "dni": "14274653W",
+      "fechaNacimiento": "24/07/2002"
+    }
+  ],
+      "info":
+      [
+        {
+          "id":1,
+          "noticias": [
+            {
+              "id": 1,
+              "titulo": "Incendio en Granada",
+              "texto": "Incendio en Granada en el parque Federico García Lorca",
+              "urlImg": "https://fotografias.antena3.com/clipping/cmsimages02/2021/12/08/E40582F8-A1DF-426A-82C1-8748319EFF92/98.jpg?crop=3543,1993,x0,y185&width=1900&height=1069&optimize=low&format=webply"
+            },
+            {
+              "id": 2,
+              "titulo": "Accidente en la A-4",
+              "texto": "Accidente múltiple en la autopista A-4, se ruega precaución",
+              "urlImg": "https://cadenaser.com/resizer/NM0z3A4M4pndqKiwk-ci65TC-7c=/736x414/filters:format(jpg):quality(70):focal(354x433:364x443)/cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/B2D5SP3IABEN5BKVCKDAJH6UDY.jpg"
+            },
+            {
+              "id": 3,
+              "titulo": "Cierre de carretera en Madrid",
+              "texto": "Cierre de carretera en Madrid debido a obras de mantenimiento",
+              "urlImg": "https://s1.elespanol.com/2024/02/06/invertia/830677022_239699883_1706x960.jpg"
+            },
+            {
+              "id": 4,
+              "titulo": "Retención en la AP-7",
+              "texto": "Fuerte retención en la autopista AP-7 por accidente, tomar rutas alternativas",
+              "urlImg": "https://www.lavanguardia.com/files/image_948_465/uploads/2022/06/06/629e1d7ed4018.jpeg"
+            },
+            {
+              "id": 5,
+              "titulo": "Alerta por niebla en Galicia",
+              "texto": "Alerta por fuerte niebla en Galicia, reducir velocidad y encender luces",
+              "urlImg": "https://estaticos-cdn.prensaiberica.es/clip/f08d4758-5e3c-4f88-abab-91d7296631ae_16-9-discover-aspect-ratio_default_0.jpg"
+            },
+            {
+              "id": 6,
+              "titulo": "Trabajos de mantenimiento en la N-340",
+              "texto": "Trabajos de mantenimiento en la carretera N-340, se espera congestión",
+              "urlImg": "https://www.lacomarcadepuertollano.com/asset/thumbnail,1280,720,center,center/media/lacomarcadepuertollano/images/2023/05/17/20230517132130474066.jpg"
+            }
+          ]
+
+        }
+        
+       
+      ]
+    }
+    
+  
