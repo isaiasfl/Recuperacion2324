@@ -1,2 +1,12 @@
 Recuperacion
 Raisa Julia Ochoa
+
+1 - Crear una función llamada filtrar primos que tome un array como argumento y me devuelva un nuevo array sólo con los 
+número primos (sin repetir)´. Comom test le pasaré un array con texto y números.
+
+2 - Calcular la función llamada filtrar número mñas frecuente que le pasemos un array de numero (obligatoriamente) 
+y me devuelva que número se repite más.
+
+3 - Crear una función llamada filtrar crearPorPropiedad que tome p¡como primer argumento un array de objetos y como segundo el nombre
+de una propiedad y me devuelva un array con los datos de esas propiedad ordenados. Si es texto alfabéticamente y si es número 
+de mayor a menor.
