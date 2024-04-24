@@ -1,8 +1,8 @@
 
 
+import React from 'react'
 
-function Tarjet({vehiculo}) {
-
+const Tarjet = ({vehiculo}) => {
   function getColorClass(tipo) {
     switch (tipo) {
       case 'motocicleta':
@@ -38,3 +38,7 @@ function Tarjet({vehiculo}) {
 }
 
 export default Tarjet
+
+
+
+  

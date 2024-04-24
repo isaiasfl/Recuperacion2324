@@ -35,15 +35,13 @@ const [noticias, setNoticias] = useState([])
     {noticias.map((notica) => (
                     <div className="w-full md:w-1/3 p-4">
             <div className="max-w-xs mx-auto rounded overflow-hidden shadow-lg ">
-                <img 
-                    src={notica.url_img} 
-                    alt={notica.id} 
-                    className="w-full transition-opacity h-32 duration-300 hover:opacity-75 "
-                />
+                <img   src={notica.url_img} 
+                       alt={notica.id} 
+                       className="w-full transition-opacity h-32 duration-300 hover:opacity-75 "/>
                 <div className="p-4 " >
-                    <h4 className="text-xl font-semibold mb-2 text-gray-800">{notica.titulo}</h4>
-                    <p className="text-gray-600 leading-relaxed font-medium ">
-                        {notica.texto.slice(0,190)}
+                    <h4 className="text-xl font-semibold mb-2  text-gray-800">{notica.titulo}</h4>
+                    <p className="text-gray-600 leading-relaxed font-medium h-52 hover:text-gray-900">
+                        {notica.texto.slice(0,180)}
                     </p>
                     <a 
                         href="#" 

@@ -2,6 +2,7 @@
 import reactLogo from './assets/react.svg';
 import { FormRegister } from './components/FormRegister';
 import NotiTarjet from './components/NotiTarjet';
+import AltaPage from './pages/AltaPage';
 import LandinPage from './pages/LandinPage';
 import LoginPage from './pages/LoginPage';
 
@@ -98,7 +99,7 @@ function App() {
 //     </>
 
 <>
-<LandinPage/>
+<AltaPage/>
 </>
   )
 }
