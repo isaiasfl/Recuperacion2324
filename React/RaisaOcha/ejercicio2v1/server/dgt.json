@@ -98,6 +98,76 @@
       "color": "Blanco",
       "registrationDate": "24/4/2024",
       "plate": "MOS7760"
+    },
+    {
+      "id": "9093",
+      "chassis": "RZAEVJQO015774440",
+      "brand": "honda",
+      "model": "fiesta",
+      "type": "motocicleta",
+      "color": "Roja",
+      "registrationDate": "24/4/2024",
+      "plate": "VHI7473"
+    },
+    {
+      "id": "c084",
+      "chassis": "QNKVTRAK044602543",
+      "brand": "kawasaky",
+      "model": "MITT Legrand",
+      "type": "motocicleta",
+      "color": "ikn",
+      "registrationDate": "24/4/2024",
+      "plate": "GVJ2575"
+    },
+    {
+      "id": "d8b4",
+      "chassis": "OEOMFSXI492481203",
+      "brand": "honda",
+      "model": "MITT Legrand",
+      "type": "motocicleta",
+      "color": "Roja",
+      "registrationDate": "24/4/2024",
+      "plate": "WKX9408"
+    },
+    {
+      "id": "4bad",
+      "chassis": "SDUFMFKS986105281",
+      "brand": "ford",
+      "model": "MITT Legrand",
+      "type": "camión",
+      "color": "gris",
+      "registrationDate": "24/4/2024",
+      "plate": "CRA0092"
+    },
+    {
+      "id": "b7a2",
+      "chassis": "JCRQPLQE873923382",
+      "brand": "ford",
+      "model": "ersh",
+      "type": "coche",
+      "color": "Roja",
+      "registrationDate": "24/4/2024",
+      "plate": "XUY7339"
+    },
+    {
+      "id": "662c",
+      "chassis": "EPTCQDOW272640387",
+      "brand": "honda",
+      "model": "ersh",
+      "type": "motocicleta",
+      "color": "gris",
+      "registrationDate": "24/4/2024",
+      "plate": "AYG3159"
+    },
+    {
+      "id": "ce55",
+      "chassis": "IJTRDBER696117832",
+      "brand": "ford",
+      "model": "ersh",
+      "type": "camión",
+      "color": "Roja",
+      "registrationDate": "24/4/2024",
+      "plate": "LPA8970"
     }
   ]
 }

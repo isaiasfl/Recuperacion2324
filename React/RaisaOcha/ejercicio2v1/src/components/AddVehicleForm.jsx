@@ -4,7 +4,7 @@ import GenerateRandomPlate from "../helpers/funcionesCrud/GenerateRandomPlate";
 import GenerateRandomChassis from "../helpers/funcionesCrud/GenerateRandomChassis";
 import addVehicle from "../helpers/funcionesCrud/AddVehicle";
 
-const AddVehicleForm = () => {
+const AddVehicleForm = ({addVehicles, setAddVehicle}) => {
   const [brand, setBrand] = useState('');
   const [model, setModel] = useState('');
   const [type, setType] = useState('');
@@ -67,6 +67,8 @@ const AddVehicleForm = () => {
       setColor('');
       setRegistrationDate('');
       setErrors({});
+      setAddVehicle(!addVehicles);
+      
     }
   });    
 
