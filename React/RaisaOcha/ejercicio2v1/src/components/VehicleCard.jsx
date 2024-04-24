@@ -17,7 +17,7 @@ const VehicleCard = ({ vehicle }) => {
 
   return (
     <div className={`rounded shadow p-4 ${backgroundColor}`}>
-      <p><strong>Número de bastidor:</strong> {vehicle.numBastidor}</p>
+      <p><strong>Número de bastidor:</strong> {vehicle.chassis}</p>
       <p><strong>Marca:</strong> {vehicle.brand}</p>
       <p><strong>Modelo:</strong> {vehicle.model}</p>
       <p><strong>Tipo:</strong> {vehicle.type}</p>

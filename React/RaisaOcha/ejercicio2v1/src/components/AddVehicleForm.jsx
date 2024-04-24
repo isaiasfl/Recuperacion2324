@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Swal from 'sweetalert2';
 import GenerateRandomPlate from "../helpers/funcionesCrud/GenerateRandomPlate";
 import GenerateRandomChassis from "../helpers/funcionesCrud/GenerateRandomChassis";
+import addVehicle from "../helpers/funcionesCrud/AddVehicle";
 
 const AddVehicleForm = () => {
   const [brand, setBrand] = useState('');
@@ -50,8 +51,6 @@ const AddVehicleForm = () => {
       return;
     }
 
-    saveToJSON();
-
     Swal.fire({
       title: 'Información del formulario',
       html: generateModalContent(),
@@ -59,13 +58,18 @@ const AddVehicleForm = () => {
       showCancelButton: true,
       confirmButtonText: 'Aceptar',
       cancelButtonText: 'Cancelar'
-    })
+    }).then((result) => {
+    if (result.isConfirmed) {
+      saveToJSON();
+      setBrand('');
+      setModel('');
+      setType('');
+      setColor('');
+      setRegistrationDate('');
+      setErrors({});
+    }
+  });    
 
-    setBrand('');
-    setModel('');
-    setType('');
-    setColor('');
-    setErrors({});
   };
 
   const generateModalContent = () => {
@@ -90,25 +94,23 @@ const AddVehicleForm = () => {
       registrationDate,
       plate: GenerateRandomPlate()
     };
-    const jsonData = JSON.stringify(formData);
+     addVehicle('http://localhost:4000/altas', formData, (info) => {
+          if (info) {
+            Swal.fire({
+              icon: "success",
+              title: "¡Inserción correcta!",
+              text: `Vehiculo añadido correctamente con la matricula ${formData.matricula}`,
+            })
 
-    fetch('http://localhost:4000/altas', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: jsonData
-    })
-    .then(response => {
-      if (response.ok) {
-        console.log('Datos guardados correctamente');
-      } else {
-        console.error('Error al guardar los datos:', response.status);
-      }
-    })
-    .catch(error => {
-      console.error('Error al enviar la solicitud:', error);
-    });
+
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Error al insertar!",
+              text: "Vehiculo no añadido",
+            });
+          }
+      });
   };
 
 

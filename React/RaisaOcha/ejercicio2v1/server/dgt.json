@@ -58,6 +58,46 @@
       "color": "gris",
       "registrationDate": "2/4/2024",
       "plate": "UCA5909"
+    },
+    {
+      "id": "8325",
+      "chassis": "KXGKKQAI410858152",
+      "brand": "Honda",
+      "model": "ubn",
+      "type": "coche",
+      "color": "knj",
+      "registrationDate": "24/4/2024",
+      "plate": "BVH3739"
+    },
+    {
+      "id": "3c50",
+      "chassis": "LOKQOEWX390510713",
+      "brand": "kawasaky",
+      "model": "r34",
+      "type": "motocicleta",
+      "color": "verde",
+      "registrationDate": "24/4/2024",
+      "plate": "EOK9596"
+    },
+    {
+      "id": "6318",
+      "chassis": "CRNOSDZK242087131",
+      "brand": "yamaha",
+      "model": "Y3",
+      "type": "camión",
+      "color": "azul",
+      "registrationDate": "24/4/2024",
+      "plate": "TOS1941"
+    },
+    {
+      "id": "e69c",
+      "chassis": "BFHYQMXY109660689",
+      "brand": "seat",
+      "model": "T4",
+      "type": "camión",
+      "color": "Blanco",
+      "registrationDate": "24/4/2024",
+      "plate": "MOS7760"
     }
   ]
 }
