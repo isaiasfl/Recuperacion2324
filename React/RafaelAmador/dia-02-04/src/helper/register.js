@@ -30,6 +30,7 @@ export const register = (username, password, dni, fecha) =>{
         })
         .catch(error => {
             console.error('Error al registrar usuario:', error);
+            throw error;
         });
        
 }

@@ -28,6 +28,10 @@ const RegisterPage = () => {
           title: 'Error en el registro',
           text: error.message
         });
+        setUsername('');
+        setPassword('');
+        setDNI('');
+        setFecha('');
       });
   };
   return (
