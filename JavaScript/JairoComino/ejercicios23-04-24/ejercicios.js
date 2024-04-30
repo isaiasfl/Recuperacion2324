@@ -107,7 +107,7 @@ let copia =[...array]
 copia.sort((a, b) => { 
     // Ordenar números de mayor a menor
     if (typeof a[propiedad] === 'number') {
-       
+        
         return b[propiedad] - a[propiedad];
         
         // Ordenar texto alfabéticamente

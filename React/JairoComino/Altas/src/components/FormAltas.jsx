@@ -51,11 +51,20 @@ const handleSubmit=async(e)=>{
          matriculaAleatoria=generarMatricula();
      if (tieneRepetidosmatriculas(data, matriculaAleatoria)==true){
          matriculaAleatoria=generarMatricula()
+
      }
      if (nbastidor==""&&marca==""&&modelo==""&&tipo==""&&color=="") {
      
+      Swal.fire({
+        icon: "error",
+        title: `¡Inserción incorreta`,
+        text: `Datos del veiculo vacios :
+        `
+      }); 
+
        console.log("campos vacios");
-     }
+       
+     }else{
       fechaactual=obtenerFechaActual()
      const newALta={
       nbastidor:nbastidor,
@@ -154,6 +163,7 @@ const handleSubmit=async(e)=>{
     });
      
   }
+}
   
 } catch (error) {
         console.log(error);

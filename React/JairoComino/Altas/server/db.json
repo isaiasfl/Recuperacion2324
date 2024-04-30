@@ -126,19 +126,29 @@
       "id": "1",
       "username": "jairo",
       "password": "hlanz",
-      "DNI": "2376421S"
+      "DNI": "2376421S",
+      "fecha": "21-04-1998"
     },
     {
       "id": "1bfc",
       "username": "paco",
       "password": "paco",
-      "DNI": "123454D"
+      "DNI": "123454D",
+      "fecha": "01-07-2002"
     },
     {
       "id": "cae9",
       "username": "paca",
       "password": "gqwee4hye5",
-      "DNI": "123454F"
+      "DNI": "123454F",
+      "fecha": "17-11-1985"
+    },
+    {
+      "id": "1411",
+      "username": "Rafa",
+      "password": "rafa",
+      "DNI": "45674356F",
+      "fercha": "2003-03-30"
     }
   ],
   "info": [

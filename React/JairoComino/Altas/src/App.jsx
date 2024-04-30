@@ -99,7 +99,7 @@ function App() {
 //     </>
 
 <>
-<AltaPage/>
+<FormRegister/>
 </>
   )
 }

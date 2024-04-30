@@ -4,6 +4,7 @@ import getdata from '../helpers/getdata';
 
 export const FormRegister = () => {
 const [username, setUsername] = useState("")
+const [fechanaci, setFechanaci] = useState("")
 const [password, setPassword] = useState("")
 const [DNI, setDNI] = useState("");
 
@@ -53,7 +54,8 @@ const handleSubmit=async(e)=>{
         const newUSer={ 
             username:username,
             password:password,
-            DNI:DNI
+            DNI:DNI,
+            fercha:fechanaci
             };
         console.log(newUSer);
         
@@ -79,6 +81,7 @@ const handleSubmit=async(e)=>{
           setDNI("");
           setPassword("");
           setUsername("");
+          setFechanaci("");
         } else {
             Swal.fire({
                 icon: "error",
@@ -110,7 +113,7 @@ const handleSubmit=async(e)=>{
     <>
      <div className="flex justify-center items-center h-screen bg-gray-100">
     <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-center text-2xl font-semibold mb-6">Inicio de sesión</h2>
+        <h2 className="text-center text-2xl font-semibold mb-6">Reguistro en la app</h2>
         
         <form className="space-y-4">
             <div>
@@ -125,8 +128,8 @@ const handleSubmit=async(e)=>{
                     placeholder="Nombre de usuario" 
                     required 
                 />
-            </div>
-            
+            </div> 
+
             <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700">Contraseña</label>
                 <input 
@@ -140,6 +143,21 @@ const handleSubmit=async(e)=>{
                     required 
                 />
             </div>
+
+            <div>
+                <label htmlFor="nacimiento" className="block text-sm font-medium text-gray-700">Fecha de Nacimiento</label>
+                <input 
+                    type="date" 
+                    id="nacimento" 
+                    name="nacimiento" 
+                    value={fechanaci}
+                    onChange={(e) => setFechanaci(e.target.value)} 
+                    className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500" 
+                    placeholder="Fecha de Nacimiento" 
+                    required 
+                />
+            </div>
+
             <div>
                 <label htmlFor="text" className="block text-sm font-medium text-gray-700">DNI</label>
                 <input 
