@@ -4,8 +4,8 @@ import { Link} from 'react-router-dom';
 const InicioPage = (props) => {
 
   const handleSalir=()=>{
-    if (localStorage.getItem('Token')) {
-       localStorage.removeItem('Token');
+    if (localStorage.getItem('Token2')) {
+       localStorage.removeItem('Token2');
        props.setToken(false);
     }
    
