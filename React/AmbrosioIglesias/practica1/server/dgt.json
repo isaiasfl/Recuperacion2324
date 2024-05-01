@@ -12,3 +12,62 @@
         }
     ]
 }
+
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "dni":"78241228n",
+            "username": "ambrosio",
+            "password": "12345678",
+            "fechaNac": "03/11/2004"
+        }
+    ]
+},
+
+{
+    "info":[
+        {
+            "id": 1,
+            "noticias": [
+                {
+                    "idNoticia": 1,
+                    "titulo": "VMP: nuevas reglas, nueva formación",
+                    "info":"A partir del 22 de enero de 2024 la Dirección General de Tráfico exigirá que los Vehículos de Movilidad Personal
+                    cumplan unas determinadas características.",
+                    "image": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2024/VMP-nuevas-reglas-nueva-formacion/patinetes_detalle.jpg_793616401.jpg"
+                },
+                {
+                    "idNoticia": 2,
+                    "titulo": "Carreteras auditadas por la IA",
+                    "info":"Una empresa tecnológicadiseña soluciones para vigilar el estado de las carreteras. 
+                    Es la inteligencia artificial aplicada a mejorar la conservación y la seguridad de las vías públicas.",
+                    "image": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Carreteras-auditadas-por-la-IA/Foto_Artxanda_detalle.jpg_793616401.jpg"
+                },
+                {
+                    "idNoticia": 3,
+                    "titulo": "Transportistas: una profesión con todo el sentido",
+                    "info":"Teniendo en cuenta que el error humano está detrás del 90% de los accidentes, cuidar la figura del conductor
+                     profesional es fundamental para avanzar en el horizonte de cero siniestros de tráfico y al tiempo fortalecer al sector
+                    de transporte terrestre por carretera.",
+                    "image": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Transportistas-una-profesion-con-todo-el-sentido/transportistas_detalle.jpg_793616401.jpg"
+                },
+                {
+                    "idNoticia": 4,
+                    "titulo": "DNI-Car: los documentos, en el móvil",
+                    "info":"Los coches de alquiler ya pueden tener documentación digital, un nuevo servicio que pretende impedir 
+                    el robo de vehículos y simplificar los trámites de matriculación a las empresas ‘rent a car’.",
+                    "image": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Dni-car-los-documentos-en-el-movil/dni_car-detalle.jpg_793616401.jpg"
+                },
+                {
+                    "idNoticia": 5,
+                    "titulo": "Sueño + conducción: pesadilla en la carretera",
+                    "info":"Tan peligroso como el alcohol, pero mucho menos conocido como factor de riesgo, conducir durmiendo menos 
+                    de seis horas cada noche se ha incorporado al listado de malas conductas al volante que pueden hacernos sufrir un 
+                    siniestro de tráfico.",
+                    "image": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Sueno-conduccion-pesadilla-en-la-carretera/conductor_detalle.jpg_793616401.jpg"
+                },
+            ]
+        }
+    ]
+}
