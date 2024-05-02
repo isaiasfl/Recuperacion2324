@@ -124,14 +124,6 @@ const RegisterPage = () => {
             >
               Registrar
             </button>
-          
-            {/* <button 
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 
-              px-4 mx-5 rounded focus:outline-none focus:shadow-lg focus:shadow-slate-700"
-            //   onClick={handleAddVehiculo}
-            >
-              Login
-            </button> */}
           </div>
         </form>
     </div>

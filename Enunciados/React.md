@@ -21,7 +21,7 @@ Crear una funcion llamada filtrarPrimos() que tome un array como argumento y me 
 
 ## EJERCICIO 2
 
-Calcular una funcion llamada numeroMasFrecuente() que le pasemos un array de numeros (obligotorio) y me devuleva que numero se repite mas
+Calcular una funcion llamada numeroMasFrecuente() que le pasemos un array de numeros (obligotorio) y me devuelva que numero se repite mas
 
 ## EJERCICIO 3
 
@@ -29,3 +29,13 @@ Crear una funcion llamada ordenarPorPropiedad() que tome por argumento un array 
 
 ## EJERCICIO 4
 
+
+
+Crear una aplicacion en React que permita gestionar las rutas ocn react router-dom de la siguiente forma:
+    -Disponemos de 3 pages que son: Login, Inicio y About
+    - LOGIN-> Un boton de entrar
+    - INICIO-> Boton de About y Salir
+    - ABOUT-> Boton de volver
+
+Para ejemplificar JWT al pulsar en Entrar, generaremos una clave llamada token cuyo valor será una cadena de letras y numeros de 12 digitos y automaticamente accederemos a la pantalla de INICIO. Mientras exista la clave 'token' mi aplicacion accedera directamente a la page de INICIO.
+Cuando pulse en Salir, la clave 'token' se borrará y automaticamente me redirigirá a LOGIN.

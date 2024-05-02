@@ -20,7 +20,7 @@ const LandingPage = () => {
 
             const data = await response.json();
             setNoticias(data[0].noticias)
-            console.log("Noticias que guardo en el estado",data[0].noticias)
+            //console.log("Noticias que guardo en el estado",data[0].noticias)
           } catch (error) {
               console.error(error);
           }
@@ -41,7 +41,7 @@ const LandingPage = () => {
           }
         }
       getNoticiasData()
-      console.log("Noticias cuando ejecuta la funcion",noticias)
+      //console.log("Noticias cuando ejecuta la funcion",noticias)
       getImagenesData()
     }, [])
     

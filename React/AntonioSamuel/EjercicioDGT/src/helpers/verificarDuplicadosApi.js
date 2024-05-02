@@ -1,6 +1,6 @@
-export const verificarDuplicadosApi = async (propiedad, valor) => {
+export const verificarDuplicadosApi = async (endpoint, propiedad, valor) => {
     try {
-        const response = await fetch(`http://localhost:4000/altas?${propiedad}=${valor}`);
+        const response = await fetch(`http://localhost:4000/${endpoint}?${propiedad}=${valor}`);
         const data = await response.json();
         if (data.length > 0) {
             return true;

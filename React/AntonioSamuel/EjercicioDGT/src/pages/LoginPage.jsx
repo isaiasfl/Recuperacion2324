@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Swal from "sweetalert2"
 
 const LoginPage = () => {
@@ -6,26 +6,28 @@ const LoginPage = () => {
   const [password, setPassword] = useState("")
   const [user, setUser] = useState({})
 
-  const getUserData = async () => {
-    try {
-      const response = await fetch(`http://localhost:4000/usuarios?username=${username}&password=${password}`);
-
-      if (!response.ok) {
-      throw new Error("Error");
+  useEffect(() => {
+    const getUserData = async (name, pass) => {
+      try {
+        const response = await fetch(`http://localhost:4000/usuarios?username=${name}&password=${pass}`);
+  
+        if (!response.ok) {
+        throw new Error("Error");
+        }
+  
+        const data = await response.json();
+        // console.log(data[0])
+        setUser(data[0])
+      } catch (error) {
+          console.error(error);
       }
-
-      const data = await response.json();
-      // console.log(data[0])
-      setUser(data[0])
-    } catch (error) {
-        console.error(error);
     }
-  }
+    getUserData(username, password)
+  }, [username, password])
+  
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-
-    getUserData();
     // console.log(user)
 
     if (user) {
