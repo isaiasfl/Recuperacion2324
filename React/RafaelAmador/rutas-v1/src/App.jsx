@@ -32,12 +32,10 @@ function App() {
     {
       path: "/about",
       element: <About redirect={redirect} />,
-      
     },
     {
       path: "/login",
       element: <Login redirect={redirect} setRedirect={setRedirect}/>,
-      
     }
     
   ]);
