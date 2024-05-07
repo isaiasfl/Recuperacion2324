@@ -1,21 +1,11 @@
-import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import comprobarToken from "../helpers/comprobarToken"
 import { Navigate } from 'react-router-dom'
 
-const AboutPage = () => {
-    const [token, setToken] = useState(false)
-
-    useEffect(() => {
-        //Comprobar que existe el token
-        const hayToken = comprobarToken()
-        setToken(hayToken)
-    }, [])
+const AboutPage = ({token}) => {
 
   return (
       !token ? (
-        // <Navigate to="/inicio" />
-        console.log('ABOUT')
+        <Navigate to="/inicio" />
       ) : (
         <div className="m-3 ">
             <h1 className="text-xl font-bold text-center mb-7">About Page</h1>

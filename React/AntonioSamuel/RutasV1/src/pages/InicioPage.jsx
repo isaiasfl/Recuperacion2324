@@ -1,17 +1,8 @@
 import { Link } from "react-router-dom"
 import eliminarToken from "../helpers/eliminarToken"
-import { useEffect, useState } from "react"
-import comprobarToken from "../helpers/comprobarToken"
 import { Navigate } from 'react-router-dom'
 
-const InicioPage = () => {
-    const [token, setToken] = useState(false)
-
-    useEffect(() => {
-        //Comprobar que existe el token
-        const hayToken = comprobarToken()
-        setToken(hayToken)
-    }, [])
+const InicioPage = ({token, setToken}) => {
 
 
     const handleSalir = () => {
@@ -42,8 +33,11 @@ const InicioPage = () => {
             </div>
         </div>
     ) : (
-        // <Navigate to={'/login'} />
-        console.log('HOLA')
+        <>
+             <h1>No hay token</h1>
+        
+             <Navigate to={'/login'} />
+        </>
     )
   )
 }

@@ -3,8 +3,12 @@ import LoginPage from './pages/LoginPage'
 import InicioPage from './pages/InicioPage'
 import ErrorPage from './pages/ErrorPage'
 import AboutPage from './pages/AboutPage'
+import { useEffect, useState } from 'react'
+import comprobarToken from './helpers/comprobarToken'
 
 function App() {
+  const [token, setToken] = useState(false)
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -13,17 +17,22 @@ function App() {
     },
     {
       path: '/login',
-      element: <LoginPage />
+      element: <LoginPage token={token} setToken={setToken} />
     },
     {
       path: '/inicio',
-      element: <InicioPage />
+      element: <InicioPage token={token} setToken={setToken}/>
     },
     {
       path: '/about',
-      element: <AboutPage />
+      element: <AboutPage token={token}/>
     }
   ])
+  useEffect(() => {
+    //Comprobar que existe el token
+    const hayToken = comprobarToken()
+    setToken(hayToken)
+}, [])
 
   return (
     <RouterProvider router={router} />

@@ -39,3 +39,5 @@ Crear una aplicacion en React que permita gestionar las rutas ocn react router-d
 
 Para ejemplificar JWT al pulsar en Entrar, generaremos una clave llamada token cuyo valor será una cadena de letras y numeros de 12 digitos y automaticamente accederemos a la pantalla de INICIO. Mientras exista la clave 'token' mi aplicacion accedera directamente a la page de INICIO.
 Cuando pulse en Salir, la clave 'token' se borrará y automaticamente me redirigirá a LOGIN.
+
+Version 2 --> Lo mismo utilizando un estado global

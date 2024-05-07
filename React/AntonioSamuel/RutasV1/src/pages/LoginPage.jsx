@@ -1,21 +1,14 @@
-import { useEffect, useState } from "react"
 import { Navigate } from 'react-router-dom'
 import generarToken from "../helpers/generarToken"
-import comprobarToken from "../helpers/comprobarToken"
 
-const LoginPage = () => {
-    const [token, setToken] = useState(false)
+const LoginPage = ({token, setToken}) => {
 
     const handleEnter = () => {
         // Cuando entro, genero el token y lo guardo en el localStorage
         generarToken()
+        setToken(true)
     }
 
-    useEffect(() => {
-        //Comprobar que existe el token
-        const hayToken = comprobarToken()
-        setToken(hayToken)
-    }, [])
     
   return (
     token ? (
