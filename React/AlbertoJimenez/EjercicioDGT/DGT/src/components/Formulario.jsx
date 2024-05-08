@@ -13,7 +13,7 @@ const Formulario = () => {
     const [tipoVehiculo, setTipoVehiculo] = useState('Motocicleta');
     const [color, setColor] = useState('');
     const [bastidor, setBastidor] = useState('');
-    const [matricula, setMatricula] = useState('');
+    
 
     const fechaActual = format(new Date(), 'dd/MM/yyyy');
 

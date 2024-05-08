@@ -2,7 +2,9 @@
 
 import './App.css'
 //import HomePage from './pages/HomePage'
-import LandingPage from './pages/LandingPage'
+// import LandingPage from './pages/LandingPage'
+// import Login from './pages/Login'
+import Register from './pages/Register'
 
 
 function App() {
@@ -14,7 +16,11 @@ function App() {
 
     </HomePage> */}
 
-    <LandingPage ></LandingPage>
+    {/* <LandingPage ></LandingPage> */}
+
+    {/* <Login></Login> */}
+
+    <Register></Register>
     
     
     </>

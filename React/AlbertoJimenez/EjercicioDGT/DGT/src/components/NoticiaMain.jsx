@@ -5,25 +5,26 @@ const NoticiaMain = ({noticia}) => {
     // const {titulo, texto, urlImg} = noticia[0];
     
     return (
-        <div className="w-90vw bg-gray-200 h-40 flex items-center justify-center">
-        <div className="w-5/6 bg-white h-full flex items-center">
-          <img
-            src={noticia[1]?.urlImg}
-            alt="Foto Noticia"
-            className=" w-16 h-auto ml-4"
-          />
-
-        <span className="ml-4 text-lg">
-            {noticia[1]?.titulo}
-          </span>
-        <span className="ml-4 text-lg">
-            {noticia[1]?.texto}
-        </span>
+      <div className="flex flex-wrap items-center justify-center">
+        <div className="max-w-5xl bg-white shadow-md rounded-lg overflow-hidden m-4">
+          <div className="flex items-center">
+            <img
+              src={noticia[1]?.urlImg}
+              alt="Foto Noticia"
+              className="w-60 h-auto"
+            />
+            <div className="p-4">
+              <h2 className="text-2xl font-semibold mb-2">{noticia[1]?.titulo}</h2>
+              <p className="text-gray-700 text-base">{noticia[1]?.texto}</p>
+            </div>
+          </div>
         </div>
       </div>
-        
-    )
-
+    );
+    
+  
+  
+  
 
 }
 
