@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import { ProductContext } from '../context/productContext';
+import { Link } from 'react-router-dom';
 import ConfigButton from '../helpers/configButton';
 
 const EditPage = () => {
@@ -27,7 +28,15 @@ const EditPage = () => {
     return (
         <div className="p-4">
             <header className="flex justify-between items-center mb-4">
-                <ConfigButton />
+                <div>
+                    <ConfigButton />
+                    <Link to="/" className="mr-2">
+                        <button className="p-2 bg-green-500 text-white rounded">Página Principal</button>
+                    </Link>
+                    <Link to="/delete" className='mr-2'>
+                        <button className="p-2 bg-red-500 text-white rounded">Borrar</button>
+                    </Link>
+                </div>
             </header>
             <div className="mb-4">
                 <input

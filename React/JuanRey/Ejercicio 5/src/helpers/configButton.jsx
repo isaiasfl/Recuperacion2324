@@ -1,19 +1,13 @@
-import { useContext } from 'react';
-import { ConfigContext } from '../context/configContext';
+import { useTheme } from "../context/configContext";
 
-const ConfigButton = () => {
-    const { toggleTheme, toggleFont } = useContext(ConfigContext);
-
-    const handleConfigClick = () => {
-        toggleTheme();
-        toggleFont();
-    };
+const ThemeButton = () => {
+    const { toggleTheme } = useTheme();
 
     return (
-        <button onClick={handleConfigClick} className="fixed top-4 left-4 p-2 bg-gray-200 dark:bg-gray-700 rounded-full">
+        <button onClick={toggleTheme} className="mr-2 m-4 p-2 bg-gray-200 rounded-full">
             Config
         </button>
     );
 };
 
-export default ConfigButton;
+export default ThemeButton;

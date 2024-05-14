@@ -1,35 +1,34 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ConfigProvider, ConfigContext } from "./context/configContext";
+//import { ConfigProvider, ConfigContext } from "./context/configContext";
 import { ProductProvider } from "./context/productContext";
 import MainPage from './pages/MainPage';
 import EditPage from './pages/EditPage';
 import DeletePage from './pages/DeletePage';
-import { useContext } from 'react';
 import Footer from "./components/Footer"
+import { ThemeProvider } from './context/configContext';
 
 const AppWrapper = () => (
-  <ConfigProvider>
-      <ProductProvider>
-          <App />
-      </ProductProvider>
-  </ConfigProvider>
+    <ThemeProvider>
+        <ProductProvider>
+            <App />
+        </ProductProvider>
+    </ThemeProvider>
 );
 
 const App = () => {
-  const { isDarkMode } = useContext(ConfigContext);
 
-  return (
-      <Router>
-          <div className={`${isDarkMode ? 'dark' : ''} min-h-screen transition-colors duration-500`}>
-              <Routes>
-                  <Route path="/edit" element={<EditPage />} />
-                  <Route path="/delete" element={<DeletePage />} />
-                  <Route path="/" element={<MainPage />} />
-              </Routes>
-              <Footer />
-          </div>
-      </Router>
-  );
+    return (
+        <Router>
+            <div className="min-h-screen transition-colors duration-500">
+                <Routes>
+                    <Route path="/edit" element={<EditPage />} />
+                    <Route path="/delete" element={<DeletePage />} />
+                    <Route path="/" element={<MainPage />} />
+                </Routes>
+                <Footer />
+            </div>
+        </Router>
+    );
 };
 
 export default AppWrapper;

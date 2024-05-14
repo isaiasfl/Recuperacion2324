@@ -10,9 +10,10 @@ const MainPage = () => {
 
     return (
         <div className="p-4">
+        <h1 className="text-2xl mb-4">Productos</h1>
             <header className="flex justify-between items-center mb-4">
-                <ConfigButton />
                 <div>
+                    <ConfigButton />
                     <Link to="/edit" className="mr-2">
                         <button className="p-2 bg-blue-500 text-white rounded">Editar</button>
                     </Link>
