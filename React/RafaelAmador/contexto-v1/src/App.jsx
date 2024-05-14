@@ -8,6 +8,7 @@ import { ConfigProvider } from "./components/context/ConfigContext";
 import { ProductProvider } from "./components/context/ProductContext";
 import RootPage from "./pages/RootPage";
 
+
 function App() {
 
   const router = createBrowserRouter([
@@ -27,7 +28,7 @@ function App() {
   return(
     <ProductProvider> 
       <ConfigProvider> 
-        <RouterProvider router={router} />
+        <RouterProvider router={router}  />
       </ConfigProvider>
     </ProductProvider>
   )

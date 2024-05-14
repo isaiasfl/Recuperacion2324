@@ -1,5 +1,6 @@
 import  { useContext, useState } from 'react'
 import ProductContext from './context/ProductContext';
+import Swal from 'sweetalert2';
 
 const BuscarProduct = () => {
  
@@ -15,7 +16,13 @@ const BuscarProduct = () => {
         if (!searchResult) return; 
         const updatedProducts = products.map(product => {
             if (product.id === searchResult.id) {
+              Swal.fire({
+                icon: 'success',
+                title: 'Cambios efectuados!',
+                text: 'Los cambios se han efectuado correctamente.',
+              });
                 return searchResult;
+                
             } else {
                 return product;
             }
@@ -26,13 +33,13 @@ const BuscarProduct = () => {
     return (
       <div>
         <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-        <button onClick={handleSearch}>Buscar</button>
+        <button onClick={handleSearch}style={{ backgroundColor: '#198754' }}>Buscar</button>
         {searchResult && (
           <form>
             <input type="text" value={searchResult.name} readOnly />
             <input type="number" value={searchResult.stock} onChange={(e) => setSearchResult({...searchResult, stock: e.target.value})} />
             <input type="number" value={searchResult.price} onChange={(e) => setSearchResult({...searchResult, price: e.target.value})} />
-            <button type="button" onClick={handleSaveChanges}>Guardar Cambios</button>
+            <button type="button" onClick={handleSaveChanges} style={{ backgroundColor: '#198754' }}>Guardar Cambios</button>
           </form>
         )}
       </div>
