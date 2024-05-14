@@ -1,23 +1,14 @@
-import { createContext } from "react";
-import { configProvider } from "../context/configContext";
+import { useContext } from 'react';
+import { ConfigContext } from '../context/configContext';
 
 const Footer = () => {
-    const config = createContext(configProvider);
-
-    const changeConfig = () => {
-
-    }
+    const { bgColor } = useContext(ConfigContext);
 
     return (
-        <div>
-            <h1>Info de Configuración</h1>
-            <div>
-                <p>Color de fondo: </p>
-                <p>Color de texto: </p>
-                <p>Fuente del texto: </p>
-            </div>
-        </div>
-    )
-}
+        <footer className="fixed bottom-0 left-0 w-full p-2 bg-gray-100 dark:bg-gray-900 text-center">
+            <p className="text-sm text-gray-700 dark:text-gray-300">Color actual: {bgColor}</p>
+        </footer>
+    );
+};
 
 export default Footer;

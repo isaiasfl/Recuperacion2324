@@ -1,15 +1,30 @@
-import { Header } from "../components/Header";
-import { Footer } from "../components/footer";
-import { AddProduct } from "../components/AddProduct";
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { ProductContext } from '../context/productContext';
+import ProductForm from '../helpers/productForm';
+import ProductCounter from '../helpers/productCounter';
+import ConfigButton from '../helpers/configButton';
 
 const MainPage = () => {
-    return (
-        <div>
-            <Header />
-            <AddProduct />
-            <Footer />
-        </div>
-    )
-}
+    const { products } = useContext(ProductContext);
 
-export default MainPage
+    return (
+        <div className="p-4">
+            <header className="flex justify-between items-center mb-4">
+                <ConfigButton />
+                <div>
+                    <Link to="/edit" className="mr-2">
+                        <button className="p-2 bg-blue-500 text-white rounded">Editar</button>
+                    </Link>
+                    <Link to="/delete">
+                        <button className="p-2 bg-red-500 text-white rounded">Borrar</button>
+                    </Link>
+                </div>
+            </header>
+            <ProductForm />
+            <ProductCounter count={products.length} />
+        </div>
+    );
+};
+
+export default MainPage;

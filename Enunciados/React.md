@@ -60,7 +60,7 @@ Crear una aplicacion en React que permita gestionar las rutas con react router-d
 Para ejemplificar JWT al pulsar en Entrar, generaremos una clave llamada token cuyo valor será una cadena de letras y numeros de 12 digitos y automaticamente accederemos a la pantalla de INICIO. Mientras exista la clave 'token' mi aplicacion accedera directamente a la page de INICIO.
 Cuando pulse en Salir, la clave 'token' se borrará y automaticamente me redirigirá a LOGIN.
 
-b. En la version 2.0 haremos lo mismo pero utilizando una clave global
+b. En la version 2.0 haremos lo mismo pero utilizando una clave global.
 
 ## Ejercicio 5
 

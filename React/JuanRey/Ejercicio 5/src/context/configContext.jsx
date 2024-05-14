@@ -1,4 +1,51 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from 'react';
+
+const ConfigContext = createContext();
+
+const ConfigProvider = ({ children }) => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [font, setFont] = useState('font-sans');
+    const [bgColor, setBgColor] = useState('rgb(255, 255, 255)'); // Color inicial en modo claro
+
+    useEffect(() => {
+        if (isDarkMode) {
+            setBgColor('rgb(55, 65, 81)'); // Color de fondo en modo oscuro (gris oscuro)
+        } else {
+            setBgColor('rgb(255, 255, 255)'); // Color de fondo en modo claro (blanco)
+        }
+    }, [isDarkMode]);
+
+    const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode);
+    };
+
+    const toggleFont = () => {
+        setFont(font === 'font-sans' ? 'font-roboto' : 'font-sans');
+    };
+
+    const config = {
+        isDarkMode,
+        font,
+        bgColor,
+        toggleTheme,
+        toggleFont,
+    };
+
+    return (
+        <ConfigContext.Provider value={config}>
+            {children}
+        </ConfigContext.Provider>
+    );
+};
+
+export { ConfigContext, ConfigProvider };
+
+
+
+
+
+/**
+import { createContext, useContext } from "react";
 
 const configContext = createContext({});
 
@@ -28,6 +75,10 @@ export const configProvider = ({children}) => {
 };
 
 
+export const useThemeConfig = () => {
+    return useContext(configContext).config[0].theme;
+};
+*/
 /** 
 const configContext = () => {
     const initialState = [
