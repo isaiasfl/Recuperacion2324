@@ -19,8 +19,8 @@ const InsertarProductos = () => {
     setProducts([...products, newProduct]);
     Swal.fire({
       icon: 'success',
-      title: 'Cambios efectuados!',
-      text: 'Los cambios se han efectuado correctamente.',
+      title: 'Producto insertado',
+      text: 'El producto ha sido insertado correctamente.',
     });
     setName('');
     setStock('');
