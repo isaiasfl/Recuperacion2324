@@ -46,5 +46,16 @@ const createInventory = () => {
 /// ---- Test o pruebas ----
 
 const miInventario = createInventory();
-miInventario.addProduct()
 const actualizarInventario = miInventario.updateProduct(product)
+inventory.addProduct(1, 'Producto A', 'Categoría 1', 10.99, 100);
+inventory.addProduct(2, 'Producto B', 'Categoría 2', 5.99, 200);
+inventory.addProduct(3, 'Producto C', 'Categoría 1', 8.99, 150);
+
+inventory.updateProduct(1, 120);
+
+inventory.deleteProduct(2);
+
+console.log('Productos en Categoría 1:', inventory.searchByCategory('Categoría 1'));
+
+// Obtener la lista de productos por orden de precio
+console.log('Productos ordenados por precio:', inventory.getProductsSortedByPrice());
