@@ -1,0 +1,173 @@
+{
+  "altas": [
+    {
+      "id": "1",
+      "numBastidor": "4595",
+      "": "Renault",
+      "model": "Scenic",
+      "type": "coche",
+      "color": "azul",
+      "registrationDate": "02/04/2024",
+      "plate": "1234ABC"
+    },
+    {
+      "id": "718c",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "fiesta",
+      "type": "coche",
+      "color": "gris",
+      "registrationDate": "2/4/2024",
+      "plate": "MZC2301"
+    },
+    {
+      "id": "7679",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "fiesta",
+      "type": "camión",
+      "color": "gris",
+      "plate": "CVK7685"
+    },
+    {
+      "id": "93eb",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "fiesta",
+      "type": "camión",
+      "color": "gris",
+      "registrationDate": "2/4/2024",
+      "plate": "WUK1624"
+    },
+    {
+      "id": "4b74",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "ersh",
+      "type": "motocicleta",
+      "color": "gris",
+      "registrationDate": "2/4/2024",
+      "plate": "RYF2962"
+    },
+    {
+      "id": "d752",
+      "numBastidor": "3456",
+      "brand": "ford",
+      "model": "ersh",
+      "type": "coche",
+      "color": "gris",
+      "registrationDate": "2/4/2024",
+      "plate": "UCA5909"
+    },
+    {
+      "id": "8325",
+      "chassis": "KXGKKQAI410858152",
+      "brand": "Honda",
+      "model": "ubn",
+      "type": "coche",
+      "color": "knj",
+      "registrationDate": "24/4/2024",
+      "plate": "BVH3739"
+    },
+    {
+      "id": "3c50",
+      "chassis": "LOKQOEWX390510713",
+      "brand": "kawasaky",
+      "model": "r34",
+      "type": "motocicleta",
+      "color": "verde",
+      "registrationDate": "24/4/2024",
+      "plate": "EOK9596"
+    },
+    {
+      "id": "6318",
+      "chassis": "CRNOSDZK242087131",
+      "brand": "yamaha",
+      "model": "Y3",
+      "type": "camión",
+      "color": "azul",
+      "registrationDate": "24/4/2024",
+      "plate": "TOS1941"
+    },
+    {
+      "id": "e69c",
+      "chassis": "BFHYQMXY109660689",
+      "brand": "seat",
+      "model": "T4",
+      "type": "camión",
+      "color": "Blanco",
+      "registrationDate": "24/4/2024",
+      "plate": "MOS7760"
+    },
+    {
+      "id": "9093",
+      "chassis": "RZAEVJQO015774440",
+      "brand": "honda",
+      "model": "fiesta",
+      "type": "motocicleta",
+      "color": "Roja",
+      "registrationDate": "24/4/2024",
+      "plate": "VHI7473"
+    },
+    {
+      "id": "c084",
+      "chassis": "QNKVTRAK044602543",
+      "brand": "kawasaky",
+      "model": "MITT Legrand",
+      "type": "motocicleta",
+      "color": "ikn",
+      "registrationDate": "24/4/2024",
+      "plate": "GVJ2575"
+    },
+    {
+      "id": "d8b4",
+      "chassis": "OEOMFSXI492481203",
+      "brand": "honda",
+      "model": "MITT Legrand",
+      "type": "motocicleta",
+      "color": "Roja",
+      "registrationDate": "24/4/2024",
+      "plate": "WKX9408"
+    },
+    {
+      "id": "4bad",
+      "chassis": "SDUFMFKS986105281",
+      "brand": "ford",
+      "model": "MITT Legrand",
+      "type": "camión",
+      "color": "gris",
+      "registrationDate": "24/4/2024",
+      "plate": "CRA0092"
+    },
+    {
+      "id": "b7a2",
+      "chassis": "JCRQPLQE873923382",
+      "brand": "ford",
+      "model": "ersh",
+      "type": "coche",
+      "color": "Roja",
+      "registrationDate": "24/4/2024",
+      "plate": "XUY7339"
+    },
+    {
+      "id": "662c",
+      "chassis": "EPTCQDOW272640387",
+      "brand": "honda",
+      "model": "ersh",
+      "type": "motocicleta",
+      "color": "gris",
+      "registrationDate": "24/4/2024",
+      "plate": "AYG3159"
+    },
+    {
+      "id": "ce55",
+      "chassis": "IJTRDBER696117832",
+      "brand": "ford",
+      "model": "ersh",
+      "type": "camión",
+      "color": "Roja",
+      "registrationDate": "24/4/2024",
+      "plate": "LPA8970"
+    }
+  ]
+}
