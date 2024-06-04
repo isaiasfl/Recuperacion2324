@@ -15,6 +15,7 @@ const NoticiaContainer = () => {
     const fetchNews = async () => {
       const response = await fetch("http://localhost:3001/noticias");
       const data = await response.json();
+      console.log(data);
       setNews(data);
       setLoading(false);
     };

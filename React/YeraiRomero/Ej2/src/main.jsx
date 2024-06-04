@@ -5,6 +5,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <App />
+    </React.Suspense>
   </React.StrictMode>,
 )
