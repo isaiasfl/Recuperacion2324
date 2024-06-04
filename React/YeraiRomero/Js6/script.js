@@ -56,6 +56,16 @@ function CommentSystem() {
     let sorted = new Map([...comments.entries()].sort((a, b) => b[1].date - a[1].date));
     return sorted;
   }
+  function darLike(id) {
+    const comment = comments.get(id);
+    if (comment) {
+      comment.likes++;
+    } else { throw new Error('Comment not found'); }
+  }
+  function ordenadosPorLikes() {
+    let sorted = new Map([...comments.entries()].sort((a, b) => b[1].likes - a[1].likes));
+    return sorted;
+  }
   return {
     addComment,
     responder,
@@ -63,11 +73,13 @@ function CommentSystem() {
     getRespuestasRecursivas,
     print,
     getOrdenados,
-    getOrdenadosReversed
+    getOrdenadosReversed,
+    darLike,
+    ordenadosPorLikes
   };
 }
 
-/* tests */
+/* tests 
 let cs = new CommentSystem();
 cs.addComment('Hola');
 setTimeout(() => {
@@ -75,28 +87,50 @@ setTimeout(() => {
   cs.addComment('Hola3');
   setTimeout(
     () => {
+
+
       cs.responder(1, 'Hola Respuesta test');
       cs.responder(1, 'Hola Respuesta');
       cs.responder(2, 'Hola Respuesta2');
       cs.responder(2, 'Hola Respuesta2');
       setTimeout(() => {
+
+
         cs.responder(3, 'Hola Respuesta recursiva');
         cs.responder(4, 'Hola Respuesta recursiva 2');
         cs.responder(9, 'Hola Respuesta recursiva 3');
-        console.log("Respuestas de 1");
-        console.log(cs.getRespuestas(1));
-        console.log("Respuestas de 2");
-        console.log(cs.getRespuestas(2));
+        //       console.log("Respuestas de 1");
+        //        console.log(cs.getRespuestas(1));
+        //        console.log("Respuestas de 2");
+        //       console.log(cs.getRespuestas(2));
         console.log("Print");
         cs.print();
+
         console.log("Respuestas recursivas");
         console.log(cs.getRespuestasRecursivas(1));
         console.log("Ordenados");
         console.log(cs.getOrdenados());
         console.log("Ordenados Reversed");
         console.log(cs.getOrdenadosReversed());
+
+
+
       }, 1000);
+
     }, 1000);
+
 }, 1000);
 
 // */
+
+// test likes
+let cs = new CommentSystem();
+cs.addComment('Hola');
+cs.addComment('Hola2');
+cs.addComment('HolaSinLikes');
+cs.darLike(1);
+cs.darLike(1);
+cs.darLike(2);
+cs.darLike(2);
+cs.darLike(2);
+console.log(cs.ordenadosPorLikes());
