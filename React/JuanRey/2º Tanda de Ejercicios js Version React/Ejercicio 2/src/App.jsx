@@ -3,10 +3,8 @@ import RemoveVentaForm from './components/RemoveVentaForm';
 import TablaDeVentas from './components/TablaDeVentas';
 import Ventas from './components/Ventas';
 import { VentasProvider } from './context/VentasContext';
-import { ventas, totalProductosVendidos } from './utils/Funciones';
 
 function App() {
-  const resumen = totalProductosVendidos(ventas);
 
   return (
     <VentasProvider>
