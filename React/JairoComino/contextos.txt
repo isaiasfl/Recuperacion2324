@@ -1,0 +1,29 @@
+3 paginas
+
+enunciado
+pretentede ejemplificar el uso de dos contextos globales el primero 
+usecontext
+configContext
+
+
+pagina 1
+el contexto  configContext permite almacenar una  variable para indicar modo claro y modo oscuro y un tipo defuente.
+dicho contexto se aplicara en la pulsacion con click del boton config  cambiando de modo claro a modo oscuro y viceversa
+y aplicara la funet robotom el fondo pasa agris oscuro y la letra a blanco .
+si pulsamos de nuvo el color blanco  la letra  pasara anegra y la fuente por defecto.
+en el footer aparecera el rgb(codigo) de los colores y el nombre de la fuente 
+
+contexto usecontext
+crearemos un contexto que almacenara un array de objetos de cada objeto  tendremos id,nombre,stock y precio
+que se usara de la siguente forma
+en la page 1 tendremos un com pnente para insertar productos otro componente que sera un contador que tendra 
+el nuemero de productos o objetos que tengo ,el lacabecera tendremos un boton que es editar que al pursallo nos llevara a la 
+page2  el cual tendra un componente buscador que al darle a buscar directamente los datos de ese producto aparezcanen un formulario de edición el
+ id no se puede editar 
+
+ el boton borrar de la cabecera de las paginas  cuando se pulse  me llevara ala page3
+ me aparecera una tabla contodos los productos con una papelera para borrar al pursarla con una aleta
+
+
+ v2
+ guardara toda la info de los contextos en google

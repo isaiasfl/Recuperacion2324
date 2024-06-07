@@ -1,7 +1,7 @@
 se desea realizar una aplicacioin para la dgt 
 en esta primera etapa vamos a gestionar el alta de matriculacion de los veiculos
 atravez de una pagina wed con las siguentes caraterisaticas
-1- deseamos registrar de cada veiculo la siguiente info nºvastidor,marca,modelo ,tipo(motocicleta,coche,camion),color,fecha de alta
+1- deseamos registrar de cada veiculo la siguiente info nºvastidor,marca,stock ,tipo(motocicleta,coche,camion),color,fecha de alta
 cuando insetemos un nuevo veiculo se debe balidar el numero de vastidor que no este repetido
 de todos los campos estenrellenos
 cuando ledemos a insertar me generara una matricula formada por 4 numeros y3 letras aleatrorias no pudiendo estar repetidas

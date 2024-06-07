@@ -1,18 +1,16 @@
 import React from 'react'
-import { Link} from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
-const InicioPage = (props) => {
+const InicioPage = () => {
 
   const handleSalir=()=>{
     if (localStorage.getItem('Token2')) {
        localStorage.removeItem('Token2');
-       props.setToken(false);
     }
    
   }
   return (
     <>
-       {props.token==false && <Navigate to={'/'}/>}
      <div>
       INICIO
      </div>

@@ -5,12 +5,12 @@ import generarMatricula from "../helpers/generarmatriculas";
 import obtenerFechaActual from "../helpers/generadorfechas";
 import nbastidoraletorio from "../helpers/nbastidoraleatorio";
 
-// nºvastidor,marca,modelo ,tipo(motocicleta,coche,camion),color,fecha de alta
+// nºvastidor,marca,stock ,tipo(motocicleta,coche,camion),color,fecha de alta
 
 const FormAltas = () => {
     const [nbastidor, setNBastidor] = useState("");
     const [marca, setMarca] = useState("");
-    const [modelo, setModelo] = useState("");
+    const [stock, setstock] = useState("");
     const [tipo, setTipo] = useState("motocicleta");
     const [color, setColor] = useState("");
     let matriculaAleatoria="";
@@ -53,7 +53,7 @@ const handleSubmit=async(e)=>{
          matriculaAleatoria=generarMatricula()
 
      }
-     if (nbastidor==""&&marca==""&&modelo==""&&tipo==""&&color=="") {
+     if (nbastidor==""&&marca==""&&stock==""&&tipo==""&&color=="") {
      
       Swal.fire({
         icon: "error",
@@ -69,7 +69,7 @@ const handleSubmit=async(e)=>{
      const newALta={
       nbastidor:nbastidor,
       marca:marca,
-      modelo:modelo,
+      stock:stock,
       tipo:tipo,
       color:color,
       fecha:fechaactual,
@@ -98,7 +98,7 @@ const handleSubmit=async(e)=>{
           Datos: 
           NºBastidor: ${nbastidor},
           Marca:${marca},
-          Modelo:${modelo},
+          stock:${stock},
           Tipo:${tipo},
           Color:${color}
           `
@@ -107,7 +107,7 @@ const handleSubmit=async(e)=>{
         // Limpiar el estado del formulario si la solicitud es exitosa
         setNBastidor("");
         setMarca("");
-        setModelo("");
+        setstock("");
         setTipo("");
         setColor("");
       } else {
@@ -129,7 +129,7 @@ const handleSubmit=async(e)=>{
      <h2> Nº Bastidor:<b> ${nbastidor}</b></h2>
      <p>
       Marca: <b>${marca}</b><br>
-      Modelo:<b> ${modelo}</b><br>
+      stock:<b> ${stock}</b><br>
       Tipo:<b> ${tipo}</b><br>
       Color:<b> ${color}</b></p>`,
       showCancelButton: true,
@@ -150,13 +150,13 @@ const handleSubmit=async(e)=>{
         });
         setNBastidor("");
         setMarca("");
-        setModelo("");
+        setstock("");
         setTipo("");
         setColor("");
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         setNBastidor("");
             setMarca("");
-            setModelo("");
+            setstock("");
             setTipo("");
             setColor("");
       }
@@ -187,8 +187,8 @@ const handlebastidor=(e)=>{
       <input type="text" id="marca" name="marca" value={marca} onChange={(e) => setMarca(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
     </div>
     <div className="mb-4">
-      <label htmlFor="modelo" className="block text-gray-700 text-sm font-bold mb-2">Modelo:</label>
-      <input type="text" id="modelo" name="modelo" value={modelo} onChange={(e) => setModelo(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+      <label htmlFor="stock" className="block text-gray-700 text-sm font-bold mb-2">stock:</label>
+      <input type="text" id="stock" name="stock" value={stock} onChange={(e) => setstock(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
     </div>
     <div className="mb-4">
       <label htmlFor="tipo" className="block text-gray-700 text-sm font-bold mb-2">Tipo:</label>

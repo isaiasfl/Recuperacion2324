@@ -25,7 +25,7 @@ const Tarjet = ({vehiculo}) => {
             style={{ width: '300px' }}
             >
                 <h2 className="text-2xl font-semibold"> NºBastidor: {vehiculo.nbastidor}</h2>
-                <p><strong>Modelo:</strong> {vehiculo.modelo}</p>
+                <p><strong>stock:</strong> {vehiculo.stock}</p>
                 <p><strong>Marca:</strong> {vehiculo.marca}</p>
                 <p><strong>Color:</strong> {vehiculo.color}</p>
                 <p><strong>Fecha de Alta:</strong> {vehiculo.fecha}</p>
