@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 import { useComentarios } from './context/ComentariosProvider';
-
 
 const ResponderComentario = ({ id }) => {
   const [respuesta, setRespuesta] = useState('');
@@ -8,8 +8,21 @@ const ResponderComentario = ({ id }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!respuesta) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Campo vacío',
+        text: 'Por favor, ingresa una respuesta.',
+      });
+      return;
+    }
     responderComentario(id, respuesta);
     setRespuesta('');
+    Swal.fire({
+      icon: 'success',
+      title: 'Respuesta agregada',
+      text: 'Tu respuesta ha sido agregada con éxito.',
+    });
   };
 
   return (

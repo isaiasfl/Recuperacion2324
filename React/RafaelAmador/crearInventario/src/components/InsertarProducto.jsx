@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import Swal from 'sweetalert2';
-import { insertarProducto } from "../firebase/products";
 import ProductContext from "./context/ProductContext";
+import { insertarProducto } from "../firebase/products";
 
 const InsertarProducto = () => {
     const { products, setProducts } = useContext(ProductContext);
@@ -12,49 +12,46 @@ const InsertarProducto = () => {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-   
-
+  
       if (!name || !stock || !categoria || !price) {
-        Swal.fire({
-          icon: 'error',
-          title: 'Campos incompletos',
-          text: 'Por favor, completa todos los campos.',
-        });
-        return;
+          Swal.fire({
+              icon: 'error',
+              title: 'Campos incompletos',
+              text: 'Por favor, completa todos los campos.',
+          });
+          return;
       }
-
+  
       const newProduct = {
-        nombre: name,
-        stock: parseInt(stock),
-        categoria: categoria,
-        precio: parseFloat(price),
+          nombre: name,
+          stock: parseInt(stock),
+          categoria: categoria,
+          precio: parseFloat(price),
       };
-      console.log(newProduct);
-
+  
+      console.log('Intentando insertar el producto:', newProduct);
+  
       try {
-        
-        const productId = await insertarProducto(newProduct);
-        console.log("dsf");
-        setProducts([...products, { id: productId, ...newProduct }]);
-        Swal.fire({
-          icon: 'success',
-          title: 'Producto insertado',
-          text: 'El producto ha sido insertado correctamente.',
-        });
-        setCategoria('');
-        setName('');
-        setStock('');
-        setPrice('');
+          const productId = await insertarProducto(newProduct);
+          setProducts([...products, { id: productId, ...newProduct }]);
+          Swal.fire({
+              icon: 'success',
+              title: 'Producto insertado',
+              text: 'El producto ha sido insertado correctamente.',
+          });
+          setCategoria('');
+          setName('');
+          setStock('');
+          setPrice('');
       } catch (error) {
-        console.error('Error al insertar el producto:', error);
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Hubo un problema al insertar el producto. Por favor, inténtalo de nuevo más tarde.',
-        });
+          console.error('Error al insertar el producto:', error);
+          Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: 'Hubo un problema al insertar el producto. Por favor, inténtalo de nuevo más tarde.',
+          });
       }
-    };
-
+  };
     return (
       <form
         onSubmit={handleSubmit}

@@ -1,5 +1,5 @@
 {
-  "name": "comentarios",
+  "name": "practicarparaexamen2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,13 +7,17 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json_server": "json-server --watch server/productos.json --port 4000",
+    "lanzar": "start /B npm run json_server && vite"
   },
   "dependencies": {
+    "firebase": "^10.12.2",
+    "json-server": "^1.0.0-beta.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
-    "sweetalert2": "^11.11.0"
+    "sweetalert2": "^11.11.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
