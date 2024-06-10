@@ -1,0 +1,81 @@
+{
+    "productos": [
+      {
+        "nombre": "Laptop",
+        "categoria": "Electrónica",
+        "precio": 1200,
+        "stock": 15,
+        "id": "2c0d"
+      },
+      {
+        "nombre": "Smartphone",
+        "categoria": "Electrónica",
+        "precio": 800,
+        "stock": 30,
+        "id": "aeb8"
+      },
+      {
+        "nombre": "Televisor",
+        "categoria": "Electrónica",
+        "precio": 1500,
+        "stock": 10,
+        "id": "b033"
+      },
+      {
+        "nombre": "Auriculares",
+        "categoria": "Electrónica",
+        "precio": 300,
+        "stock": 25,
+        "id": "bb47"
+      },
+      {
+        "nombre": "Cafetera",
+        "categoria": "Electrodomésticos",
+        "precio": 90,
+        "stock": 40,
+        "id": "148f"
+      },
+      {
+        "nombre": "Refrigerador",
+        "categoria": "Electrodomésticos",
+        "precio": 1200,
+        "stock": 8,
+        "id": "2387"
+      },
+      {
+        "nombre": "Aspiradora",
+        "categoria": "Electrodomésticos",
+        "precio": 700,
+        "stock": 12,
+        "id": "4803"
+      },
+      {
+        "nombre": "Silla",
+        "categoria": "Muebles",
+        "precio": 150,
+        "stock": 20,
+        "id": "b137"
+      },
+      {
+        "nombre": "Mesa",
+        "categoria": "Muebles",
+        "precio": 350,
+        "stock": 5,
+        "id": "477d"
+      },
+      {
+        "nombre": "Lámpara",
+        "categoria": "Iluminación",
+        "precio": 50,
+        "stock": 60,
+        "id": "f9e7"
+      },
+      {
+        "id": "65bc",
+        "nombre": "Televisor",
+        "categoria": "Electronica",
+        "precio": "123",
+        "stock": "123"
+      }
+    ]
+  }
