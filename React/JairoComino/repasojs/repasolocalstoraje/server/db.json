@@ -1,0 +1,186 @@
+{
+    "altas": [
+      {
+        "id": "1",
+        "nbastidor": "47595",
+        "marca": "Renault",
+        "stock": "Scenic",
+        "tipo": "coche",
+        "color": "azul",
+        "fecha": "02/04/2024",
+        "matricula": "1234ABC"
+      },
+      {
+        "id": "e0c6",
+        "nbastidor": "2134",
+        "marca": "Seat",
+        "stock": "Cupra",
+        "tipo": "coche",
+        "color": "negro",
+        "fecha": "2024-04-03",
+        "matricula": "8779KRZ"
+      },
+      {
+        "id": "71d8",
+        "nbastidor": "B1ZckTFDpWTXM7Wl",
+        "marca": "Seat",
+        "stock": "cordoba",
+        "tipo": "coche",
+        "color": "gris",
+        "fecha": "2024-04-03",
+        "matricula": "5532SKL"
+      },
+      {
+        "id": "b752",
+        "nbastidor": "xi4mKwqPi1brmrNU",
+        "marca": "Kawasaki",
+        "stock": "z900",
+        "tipo": "motocicleta",
+        "color": "verde",
+        "fecha": "2024-04-03",
+        "matricula": "6179UJL"
+      },
+      {
+        "id": "4d39",
+        "nbastidor": "crfqOTWfltpNdNJv",
+        "marca": "Man",
+        "stock": " TGX 18.480 4×2 BLS EfficientLine 2",
+        "tipo": "camion",
+        "color": "blanco",
+        "fecha": "2024-04-03",
+        "matricula": "4813SAE"
+      },
+      {
+        "id": "ad15",
+        "nbastidor": "a0HWTL0SvmM71nki",
+        "marca": "mazda",
+        "stock": "rx-7",
+        "tipo": "coche",
+        "color": "naranga",
+        "fecha": "2024-04-09",
+        "matricula": "3228LNU"
+      },
+      {
+        "id": "897f",
+        "nbastidor": "wLiFWmzD4IXJt9rt",
+        "marca": "Honda",
+        "stock": "CBR650R",
+        "tipo": "motocicleta",
+        "color": "rojo",
+        "fecha": "2024-04-09",
+        "matricula": "0400NBM"
+      },
+      {
+        "id": "5565",
+        "nbastidor": "pJgrk8o8Ulx2f85Z",
+        "marca": " Yamaha",
+        "stock": "MT-10",
+        "tipo": "motocicleta",
+        "color": "negro",
+        "fecha": "2024-04-09",
+        "matricula": "1460WYQ"
+      },
+      {
+        "id": "2c58",
+        "nbastidor": "Clm92oMyxpUuaKz9",
+        "marca": "renault",
+        "stock": "5 copa turbo",
+        "tipo": "coche",
+        "color": "gris",
+        "fecha": "2024-04-09",
+        "matricula": "2886TJV"
+      },
+      {
+        "id": "0ea9",
+        "nbastidor": "W5zmwXbQj5iZijjC",
+        "marca": "Seat",
+        "stock": "ibiza",
+        "tipo": "coche",
+        "color": "negro",
+        "fecha": "2024-04-09",
+        "matricula": "3465BAZ"
+      },
+      {
+        "id": "12de",
+        "nbastidor": "z0qcHoM3xJZuuJ0N",
+        "marca": "Scania",
+        "stock": "Serie R",
+        "tipo": "camion",
+        "color": "negro",
+        "fecha": "2024-04-09",
+        "matricula": "3331WXA"
+      },
+      {
+        "id": "2f1a",
+        "nbastidor": "7Bai03DsqpIiYE0t",
+        "marca": "Seat",
+        "stock": "124",
+        "tipo": "coche",
+        "color": "negro",
+        "fecha": "2024-04-10",
+        "matricula": "2130HVO"
+      }
+    ],
+    "usuarios": [
+      {
+        "id": "1",
+        "username": "jairo",
+        "password": "hlanz",
+        "DNI": "2376421S",
+        "fecha": "21-04-1998"
+      },
+      {
+        "id": "1bfc",
+        "username": "paco",
+        "password": "paco",
+        "DNI": "123454D",
+        "fecha": "01-07-2002"
+      },
+      {
+        "id": "cae9",
+        "username": "paca",
+        "password": "gqwee4hye5",
+        "DNI": "123454F",
+        "fecha": "17-11-1985"
+      },
+      {
+        "id": "1411",
+        "username": "Rafa",
+        "password": "rafa",
+        "DNI": "45674356F",
+        "fercha": "2003-03-30"
+      }
+    ],
+    "info": [
+      {
+        "id": "1",
+        "titulo": "VMP: nuevas reglas, nueva formación",
+        "texto": "La nueva micromovilidad ha llegado para quedarse y el protagonista que está robando los titulares al resto de vehículos de movilidad personal es, sin duda, el patinete eléctrico. No es para menos: según datos de la Federación Española de Vehículos de Movilidad Personal ya hay unos 5 millones de patinetes eléctricos en España. Un auténtico boom si consideramos que hasta la crisis del coronavirus de 2020 a este medio para desplazarse se le consideraba poco menos que un juguete infantil. Pero ya no es así",
+        "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2024/VMP-nuevas-reglas-nueva-formacion/patinetes_detalle.jpg_793616401.jpg"
+      },
+      {
+        "id": "2",
+        "titulo": "Recomendaciones de tráfico",
+        "texto": "Viernes 22 de marzo de 2024 En este día dará comienzo el dispositivo especial de Semana Santa – 2024 a partir de las 15 horas, con la primera Operación SALIDA, en la que se prevén desplazamientos de largo recorrido por comienzo del período vacacional de Semana Santa, junto también, con los movimientos de corto recorrido motivados por el inicio de fin de semana",
+        "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/conoce-el-estado-del-trafico/recomendaciones.jpg_699956048.jpg"
+      },
+      {
+        "id": "3",
+        "titulo": "Restricciones a la circulación",
+        "texto": "Las autoridades competentes en materia de tráfico y seguridad vial disponen anualmente medidas especiales de regulación que restringen temporalmente la circulación de determinados vehículos en fechas y recorridos para los que se prevén desplazamientos masivos, con el fin de favorecer la seguridad vial, movilidad y fluidez de la circulación.",
+        "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/conoce-el-estado-del-trafico/restricciones_v2.jpg_699956048.jpg"
+      },
+      {
+        "id": "4",
+        "titulo": "Campañas de vigilancia",
+        "texto": "La programación y realización de las Campañas y Operaciones Especiales de vigilancia y control constituye una importante actividad de la DGT. ",
+        "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/Images/conoce-la-dgt/que-hacemos/campanas-vigilancia/IMG-Portada.png_239029509.png"
+      },
+      {
+        "id": "5",
+        "titulo": "Carreteras auditadas por la IA",
+        "texto": "Una empresa tecnológica, cuyo nombre rinde homenaje al autor de “Yo, robot”, Isaac Asimov, diseña soluciones para vigilar el estado de las carreteras. Es la inteligencia artificial aplicada a mejorar la conservación y la seguridad de las vías públicas. ",
+        "url_img": "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/2023/Carreteras-auditadas-por-la-IA/Foto_Artxanda_detalle.jpg_793616401.jpg"
+      }
+    ]
+  }
