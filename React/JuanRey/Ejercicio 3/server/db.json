@@ -1,0 +1,128 @@
+{
+    "altas": [
+      {
+        "id": "e42e",
+        "bastidor": "6099100245481223",
+        "marca": "Seat",
+        "modelo": "Ibiza",
+        "tipo": "Coche",
+        "color": "negro",
+        "fecha": "09/04/2024",
+        "matricula": "2296QUU"
+      },
+      {
+        "id": "ea64",
+        "bastidor": "8303929383600808",
+        "marca": "Volvo",
+        "modelo": "FH",
+        "tipo": "Camion",
+        "color": "blanco",
+        "fecha": "09/04/2024",
+        "matricula": "2726LUJ"
+      },
+      {
+        "id": "e9c0",
+        "bastidor": "2851101832043536",
+        "marca": "Honda",
+        "modelo": "FireBlade SP",
+        "tipo": "Moto",
+        "color": "rojo",
+        "fecha": "09/04/2024",
+        "matricula": "9389KOB"
+      },
+      {
+        "id": "ddaf",
+        "bastidor": "3455737463224625",
+        "marca": "Volskwagen",
+        "modelo": "Sharan",
+        "tipo": "Coche",
+        "color": "gris",
+        "fecha": "09/04/2024",
+        "matricula": "2001VYZ"
+      },
+      {
+        "id": "7623",
+        "bastidor": "1783563997202094",
+        "marca": "Audi",
+        "modelo": "A4",
+        "tipo": "Coche",
+        "color": "blanco",
+        "fecha": "10/04/2024",
+        "matricula": "5695PIH"
+      },
+      {
+        "id": "f8ac",
+        "bastidor": "8274318715229381",
+        "marca": "Renault",
+        "modelo": "Scenic",
+        "tipo": "Coche",
+        "color": "negro",
+        "fecha": "10/04/2024",
+        "matricula": "5901JYZ"
+      }
+    ],
+    "info": [
+      {
+        "id": 1,
+        "noticias": [
+          {
+            "idnoticia": 1,
+            "titulo": "Titulo 1 noticia ejemplo",
+            "texto": "1Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quia cupiditate, officiis accusamus corrupti maiores possimus sed quam explicabo rerum blanditiis? Quod aliquam fugiat dignissimos a beatae. Commodi, tenetur nam!",
+            "url_img": "/img/accidente1.jpg"
+          },
+          {
+            "idnoticia": 2,
+            "titulo": "Titulo 2 noticia ejemplo",
+            "texto": "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quia cupiditate, officiis accusamus corrupti maiores possimus sed quam explicabo rerum blanditiis? Quod aliquam fugiat dignissimos a beatae. Commodi, tenetur nam!",
+            "url_img": "/img/accidente2.jpg"
+          },
+          {
+            "idnoticia": 3,
+            "titulo": "Titulo 3 noticia ejemplo",
+            "texto": "3Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quia cupiditate, officiis accusamus corrupti maiores possimus sed quam explicabo rerum blanditiis? Quod aliquam fugiat dignissimos a beatae. Commodi, tenetur nam!",
+            "url_img": "/img/accidente3.jpg"
+          },
+          {
+            "idnoticia": 4,
+            "titulo": "Titulo 4 noticia ejemplo",
+            "texto": "4Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quia cupiditate, officiis accusamus corrupti maiores possimus sed quam explicabo rerum blanditiis? Quod aliquam fugiat dignissimos a beatae. Commodi, tenetur nam!",
+            "url_img": "/img/asfalto.jpg"
+          },
+          {
+            "idnoticia": 5,
+            "titulo": "Titulo 5 noticia ejemplo",
+            "texto": "5Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quia cupiditate, officiis accusamus corrupti maiores possimus sed quam explicabo rerum blanditiis? Quod aliquam fugiat dignissimos a beatae. Commodi, tenetur nam!",
+            "url_img": "/img/inundacion.jpg"
+          }
+        ],
+        "imagenes": [
+          {
+            "url": "/img/seguridad.jpg"
+          },
+          {
+            "url": "/img/seguridad2.jpg"
+          },
+          {
+            "url": "/img/carretera.jpg"
+          }
+        ]
+      }
+    ],
+    "usuarios": [
+      {
+        "id": "cb15",
+        "username": "Manolo",
+        "password": "123456",
+        "DNI": "12345678G",
+        "fecha_N": "2021-01-21"
+      },
+      {
+        "id": "fa64",
+        "username": "Rafa",
+        "password": "123456",
+        "DNI": "78276637R",
+        "fecha_N": "2015-01-20"
+      }
+    ]
+  }

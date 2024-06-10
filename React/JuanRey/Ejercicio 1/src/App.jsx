@@ -1,33 +1,21 @@
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import { AuthProvider } from './context/AuthProvider';
-import ProtectedRoute from './util/ProtectedRoute';
-import LoginPage from "./pages/LoginPage";
-import ErrorPage from "./pages/ErrorPage";
-import RootPage from "./pages/RootPage";
-import MainPage from "./pages/MainPage";
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import RootPage from './pages/RootPage';
+import ErrorPage from './pages/ErrorPage';
+import { AuthProvider } from './context/AuthContextProduct';
+
+import Tareas from './components/Tareas';
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <RootPage />,
       errorElement: <ErrorPage />,
       children: [
-        {
-          element: <ProtectedRoute redirectPath="login" />,
-          children: [
-            {
-              index: true,
-              element: <MainPage />,
-            }
-          ]
+          { index: true, element: <Tareas /> },
+          { path: "/task", element: <Tareas /> },
+          ],
         },
-        {
-          path: '/login',
-          element: <LoginPage />
-        }
-      ]
-    }
-  ])
+  ]);
   return (
     <AuthProvider>
       <RouterProvider router={router} />;
@@ -35,4 +23,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

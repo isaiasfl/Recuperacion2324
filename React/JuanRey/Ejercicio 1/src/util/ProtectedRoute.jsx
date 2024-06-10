@@ -1,14 +1,11 @@
-import { Navigate, Outlet } from "react-router-dom";
-import { AuthProvider } from "../context/AuthProvider";
+import { Route, Navigate } from 'react-router-dom';
 
-const ProtectedRoute = ({redirectPath}) => {
-    const { userFirebase } = AuthProvider();
-    const isActive = !!userFirebase ;
-
-    if(!isActive){
-        return <Navigate to={redirectPath} replace />;
-    }
-    return <Outlet />;
+const ProtectedRoute = ({ redirectPath, isAuthenticated, ...props }) => {
+  if (isAuthenticated) {
+    return <Route {...props} />;
+  } else {
+    return <Navigate to={redirectPath} />;
+  }
 };
 
-export default ProtectedRoute;
+export default ProtectedRoute

@@ -1,7 +1,12 @@
+import { Outlet } from "react-router-dom"
+import Header from "../components/Header"
 
 const RootPage = () => {
     return (
-        <div>RootPage</div>
+        <>
+        <Header/>
+        <Outlet/>
+        </>
     )
 }
 

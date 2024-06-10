@@ -1,42 +1,53 @@
-import { useEffect, useState } from "react"
-import BigCard from "../components/LandingPage/BigCard"
-import ImgCard from "../components/LandingPage/ImgCard"
-import RandomCard from "../components/LandingPage/RandomCard"
-import Title from "../components/LandingPage/Title"
+import { useEffect, useState } from 'react';
+import { getNoticias } from '../helper/getNoticias';
+import Noticias from '../components/Noticias';
+import Imagen from '../components/Imagen';
+import Header from '../components/Header';
+import NoticiaPrincipal from '../components/NoticiaPrincipal';
 
-const Landingpage = () => {
-    const [noticias, setNoticias] = useState([]);
-
+const LandingPage = () => {
+    const [textoPrincipal, setTextoPrincipal] = useState("");
+    const [imgPrincipal, setImgPrincipal] = useState("");
+    const [tituloPrincipal, setTituloPrincipal] = useState("");
+    const [primeraNoticia, setPrimeraNoticia] = useState("");
+    const [segundaNoticia, setSegundaNoticia] = useState("");
+    const [terceraNoticia, setTerceraNoticia] = useState("");
     useEffect(() => {
-        fetch('http://localhost:4000/info')
-            .then((response) => response.json())
-            .then((data) => {
-                if (Array.isArray(data) && data.length > 0 && data[0].noticias) {
-                    setNoticias(data[0].noticias);
-                } else {
-                    console.error("El objeto 'info' está indefinido o vacío.");
-                }
-            })
-            .catch((error) => console.error("Error al obtener las noticias: " + error));
-    }, []);
+        const fetchData = async () => {
+        try {
+            const noticiasMap = await getNoticias();
+            
+            if (noticiasMap.size > 0) {
+            const noticiasArray = Array.from(noticiasMap.values()); 
+            const indiceAleatorio = Math.floor(Math.random() * noticiasArray.length);  
+            const noticiaAleatoria = noticiasArray[indiceAleatorio];
+            setTituloPrincipal(noticiaAleatoria.titulo);
+            setTextoPrincipal(noticiaAleatoria.texto);
+            setImgPrincipal(noticiaAleatoria.url_img);
+            const noticiasRestantes = noticiasArray.filter(noticia => noticia.idnoticia !== noticiaAleatoria.idnoticia);
+            const primerasTresNoticias = noticiasRestantes.slice(0, 3);
+            setPrimeraNoticia(primerasTresNoticias[0]);
+            setSegundaNoticia(primerasTresNoticias[1]);
+            setTerceraNoticia(primerasTresNoticias[2]);
+            } else {
+            console.log("No hay noticias");
+            }
+        } catch (error) {
+            console.error(error);
+        }
+        };
 
+        fetchData();
+    }, []);
     return (
-        <div className="flex justify-center items-center h-screen">
-            <div className="w-30">
-                <Title />
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                    <BigCard noticias={noticias} />
-                    <RandomCard noticias={noticias} />
-                    <ImgCard />
-                </div>
-                <div className="text-center mt-8">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Ver más
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
+        <>
+            <Header />
+            <NoticiaPrincipal titulo={tituloPrincipal} texto={textoPrincipal} imagen={imgPrincipal} />
+            <Noticias primera={primeraNoticia} segunda={segundaNoticia} tercera={terceraNoticia} />
+            <Imagen />
+            <button >Acceso</button>
+        </>
+    )
 }
 
-export default Landingpage;
+export default LandingPage

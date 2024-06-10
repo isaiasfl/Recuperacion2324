@@ -18,17 +18,12 @@ b. Crearemos una Page en la ruta **/task** dividida en dos Paneles:
 
 Crear una aplicacion desarrollada en React para la DGT que permita **Alta de vehículos**
 
-<<<<<<< HEAD
-a. En esta primera etapa vamos a gestionar el alta de matriculacion de los vehículos a traves de una página web con las siguientes caracteristicas:
-=======
 -> FASE 1: en esta primera etapa vamos a gestionar el alta de matriculacion de los vehículos a traves de una página web con las siguientes caracteristicas:
->>>>>>> 57f7134cf12891540dfe8284aa3fa8807737baf2
 
 - Deseamos registrar de cada vehículo la siguiente informacion: numero de vastidores, marca del vehículo, modelo del vehiculo, tipo(motocicleta, coche y camión), fecha de alta y color. Cuando insertemos un nuevo vehiculo se debe validar que el numero de vastidor no esté repetido y que todos los campos estén rellenos. Cuando le demos a insertar se generará automaticamente una matricula formada por 4 numeros aleatorios y 3 letras aleatorias, no pudiendo repetir la matrícula. Esa información aparecerá en un modal que me permitirá aceptar o cancelar.
 - Cada vehículo dado de alta aparecerá en la parte de la derecha a través de una tarjeta con todos los datos. La tarjeta tendra fondo de color gris para una moto, fondo de color azul para un coche y fondo de color marron para un camión. 
 - Adicionalmente dispondremos de un desplegable para filtrar por moto, por coche, por camión o por todos(opción por defecto). Ordenaremos por fecha de alta.
 - El almacenamiento de esta aplicacion se va a hacer por medio de una api local a través del endpoint /ALTAS usando jsonserver.
-<<<<<<< HEAD
 
 ## Ejercicio 3
 
@@ -82,5 +77,3 @@ a. Pretendemos ejemplificar el uso de dos contextos globales, el primer contexto
 - Tendremos además otro boton en la cabecera de la pagina uno llamado borrar, el cual al pulsarlo nos moverá a la página numero 3, en la cual se nos mostrarán en una tabla de objetos creados en la que al seleccionar cualquiera de ellos lo podremos eliminar.
 
 b. En la version 2.0 tendremos un boton guardar que guardará toda la información de mis contexto en la base de datos de google.
-=======
->>>>>>> 57f7134cf12891540dfe8284aa3fa8807737baf2
