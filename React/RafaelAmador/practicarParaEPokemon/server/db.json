@@ -1,0 +1,54 @@
+{
+    "pokemones":[   
+    {
+        "nombre": "Pikachu",
+        "fuerza": 55,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+    },
+    {
+        "nombre": "Charmander",
+        "fuerza": 39,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+    },
+    {
+        "nombre": "Bulbasaur",
+        "fuerza": 49,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+    },
+    {
+        "nombre": "Squirtle",
+        "fuerza": 44,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+    },
+    {
+        "nombre": "Jigglypuff",
+        "fuerza": 45,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png"
+    },
+    {
+        "nombre": "Gengar",
+        "fuerza": 65,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"
+    },
+    {
+        "nombre": "Eevee",
+        "fuerza": 55,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png"
+    },
+    {
+        "nombre": "Snorlax",
+        "fuerza": 110,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"
+    },
+    {
+        "nombre": "Mewtwo",
+        "fuerza": 100,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"
+    },
+    {
+        "nombre": "Lapras",
+        "fuerza": 85,
+        "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png"
+    }
+    ]
+}
